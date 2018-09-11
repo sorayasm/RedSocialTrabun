@@ -16,12 +16,22 @@ import {MatCardModule} from '@angular/material/card';
 
 //Formulario
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomePageComponent,
+    NavbarComponent,
+    RegisterPageComponent,
+    PerfilComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
