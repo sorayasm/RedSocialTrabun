@@ -10,9 +10,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
 
 //Formulario
 import { ReactiveFormsModule } from '@angular/forms';
