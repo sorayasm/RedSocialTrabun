@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 //Firebase
 import { AngularFireModule } from 'angularfire2';
@@ -17,15 +17,35 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
-//Welcome
+//Components
 import { WelcomeComponent } from './welcome/welcome.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+
+
+//Variable de Rutas
+const appRoutes: Routes = [
+  {
+    path : '',
+    component : WelcomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +58,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatCardModule,
     ReactiveFormsModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   exports: [
     MatButtonModule,
