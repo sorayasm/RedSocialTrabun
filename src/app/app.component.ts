@@ -14,7 +14,6 @@ export class AppComponent {
       password:""
     }
   ];
-
   /*email: string;
   password: string;
 
