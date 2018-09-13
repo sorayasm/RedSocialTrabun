@@ -1,15 +1,11 @@
-<!--div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Nombre ">
-  </mat-form-field>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Email"></textarea>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="Password">
-      <mat-option value="Password">Option</mat-option>
-    </mat-select>
-  </mat-form-field>
-</div -->
+<form formGroup="login" (ngSubmit)="onRegister()">
+  <input type="email" formControlName="email">
+  <input type="password" formControlName="password">
+  <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
+  <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button>
+</form> 
+<div *ngIf="authService.user | async">
+  <p>Bienvenido : {{(authService.user | async).email}}</p>
+  <button type="button" (click)="onLogout()">Logout</button>
+</div>
