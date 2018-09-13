@@ -1,23 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1> -->
-  <!--<h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
+<mat-sidenav-container>
+    <mat-toolbar color="primary">
+        <span>Bienvenido {{ (authService.user | async)?.email }}</span>
+    </mat-toolbar>
+    <mat-toolbar color="primary">
+        <input type="text" class="form-control" [(ngModel)]="email" placeholder="email">
+        <input type="password" class="form-control" [(ngModel)]="password" placeholder="password">
+        <button (click)="signup()" [disabled]="!email || !password">Signup</button>
+        <button (click)="login()" [disabled]="!email || !password">Login</button>
+        <button (click)="logout()">Logout</button>
+    </mat-toolbar>
+    <mat-toolbar color=primary>
+        <a routerLink="/home-page" routerLinkActive="active">Trabún</a><span>   </span>
+        <a routerLink="/perfil" routerLinkActive="active">Perfil</a><span>   </span>
+        <h2>{{url}}</h2>
+    </mat-toolbar>
 
-  <div *ngIf="!(authService.user | async)">
-    <input type="text" [(ngModel)]="email" placeholder="email">
-    <input type="password" [(ngModel)]="password" placeholder="email">
-  
-    <button (click)="signup()" [disabled]="!email || !password">
-      Signup
-    </button>
-  
-    <button (click)="login()" [disabled]="!email || !password">
-      Login
-    </button>
-  </div>
-  
-  <button (click)="logout()" *ngIf="authService.user | async">
-    Logout
-  </button> -->
+    <router-outlet>
+
+    </router-outlet>
+</mat-sidenav-container>
