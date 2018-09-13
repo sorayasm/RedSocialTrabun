@@ -21,6 +21,16 @@ import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { HomePageComponent } from './home-page/home-page.component'; // Muro
+import { NavbarComponent } from './navbar/navbar.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
+
+
+
 
 
 //Variable de Rutas
@@ -45,7 +55,11 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     WelcomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomePageComponent,
+    NavbarComponent,
+    PerfilComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
@@ -59,13 +73,18 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule
+    NgbModule,
+    HttpClientModule, 
+    HttpModule
   ],
   exports: [
     MatButtonModule,
     MatFormFieldModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService, 
+    HttpClientModule 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
