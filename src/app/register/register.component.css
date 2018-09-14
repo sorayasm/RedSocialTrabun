@@ -1,0 +1,58 @@
+.register-div{
+    background-color: white;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.head {
+    text-align: center;
+    background-color: green;
+    height: 3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+}
+.head h1{
+    font-size: 1em;
+    font-weight: 1200;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.banner {
+    background-image: url(../../assets/img/bglogin.jpg);
+    height: 12em;
+    position: fixed;
+    top: 3em;
+    left: 0;
+    right: 0;
+}
+form{
+    position: fixed;
+    top: 16em;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.register-buttons{
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    margin: 5px 10px 5px 10px;
+    background-color: #504541;
+    color: white;
+}
+
+button:hover{
+    background-color: green;
+    color: white;
+}

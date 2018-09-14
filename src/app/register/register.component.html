@@ -1,3 +1,23 @@
-<p>
-  register works!
-</p>
+
+  <div class="register-div">
+    <div class="head">
+      <h1>Registro</h1>
+    </div>
+    <div class="banner">
+      <img>
+    </div> 
+    <form>
+      <input type="text" id="inputNombre" class="form-control2 " placeholder="Nombre" tabindex="0" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu nombre." required>            
+      <br>
+      <input type="text" id="inputApellido" class="form-control2 " placeholder="Apellido" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu apellido." required>
+      <br>
+      <input type="email" id="inputEmail" class="form-control2 " placeholder="Correo electrónico" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Escribe una dirección de correo válida." required>
+      <br>
+      <input type="password" id="inputPassword" class="form-control2 " placeholder="Contraseña" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Tu contraseña debe tener al menos 6 carácteres entre letras y números." required>
+      <br>
+      <button type="button" id="btnCrearCuenta" class="btn btn-success btn-block login-btn" onclick="register()">Crear Mi Cuenta </button>
+      <br>
+      <i>Ya tengo una cuenta</i>
+      <a  type="button" id="reg-btn" class="btn btn-success btn-block login-btn">Volver</a>
+    </form>
+</div>  
