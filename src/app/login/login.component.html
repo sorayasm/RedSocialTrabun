@@ -11,3 +11,9 @@
   <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button>
   <!--Ejecutará onLogin-->
 </form>
+<h1>
+  Sign in
+</h1>
+
+<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+<button (click)="socialSignIn('google')" class="g-signin2">Sign in with Google</button>   
