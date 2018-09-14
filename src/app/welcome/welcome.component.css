@@ -9,12 +9,14 @@
 .logo{
     text-align: center;
 }
+
 .logo img{
     width: 150px;
     position: relative;
     top: 60%;
     transform: translateY(60%);
 }
+
 .logo h1{
     font-size: 5em;
     font-weight: 1200;
@@ -23,6 +25,7 @@
     padding-top: 65px;
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
+
 .welcome-buttons{
     position: absolute;
     bottom: 0;

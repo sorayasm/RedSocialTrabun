@@ -30,14 +30,27 @@
     top: 3em;
     left: 0;
     right: 0;
+    text-align: center;
 }
+
+.banner img{
+    width: 80px;
+    margin-top: 3em;
+    border: 2px solid white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
 form{
     position: fixed;
     top: 16em;
     left: 0;
     right: 0;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
+
 .register-buttons{
     position: absolute;
     bottom: 0;
@@ -47,12 +60,13 @@ form{
 }
 
 button{
-    margin: 5px 10px 5px 10px;
-    background-color: #504541;
+    width: 100%;
+    background-color: green;
     color: white;
+    margin-top: 2em;
 }
 
 button:hover{
-    background-color: green;
+    background-color: #d67d5c;
     color: white;
 }
