@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <form formGroup="login" (ngSubmit)="onRegister()">
   <input type="email" formControlName="email">
@@ -9,3 +10,24 @@
   <p>Bienvenido : {{(authService.user | async).email}}</p>
   <button type="button" (click)="onLogout()">Logout</button>
 </div>
+=======
+<!--ngIf desaparecerá lo que esta dentro del div-->
+<div *ngIf="authService.user | async">
+  <p>Bienvenido : {{(authService.user | async).email}}</p>
+  <button type="button" (click)="onLogout()">Logout</button>
+</div>
+<form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+  <input type="email" formControlName="email">
+  <input type="password" formControlName="password">
+  <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
+  <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
+  <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button>
+  <!--Ejecutará onLogin-->
+</form>
+<h1>
+  Sign in
+</h1>
+
+<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+<button (click)="socialSignIn('google')" class="g-signin2">Sign in with Google</button>   
+>>>>>>> upstream/master

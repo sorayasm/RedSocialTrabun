@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,7 @@ export class AppComponent {
       password:string;
     
   constructor(private http: Http, public authService: AuthService, route: ActivatedRoute) {
-
+    const url :Observable<string> = route.url.pipe(map(segments => segments.join('')));
   }
 
   signup() {
@@ -32,4 +34,10 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
+  /*ngOnInit() {
+   this.http.get("../assets/pokedex.json").subscribe(pokeData=>{
+     this.fullPokemonList = pokeData.json();
+   })
+    
+  }*/
 }

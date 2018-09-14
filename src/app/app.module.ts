@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 //Components
+=======
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { MaterialModule } from './material.module';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatChipsModule} from '@angular/material/chips';
+import { HttpModule, JsonpModule } from '@angular/http';
+import {RouterModule, Routes} from '@angular/router';
+
+>>>>>>> upstream/master
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -15,9 +27,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 //Firebase
+<<<<<<< HEAD
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+=======
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+>>>>>>> upstream/master
 import { AuthService } from './auth.service';
 
 //Animaciones y Material
@@ -62,6 +81,7 @@ import {
 
 //Formulario
 import { ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 
 // otros para eliminar errores
@@ -90,6 +110,43 @@ const appRoutes: Routes = [
 ];
 
 // Ng Module
+=======
+import { HomePageComponent } from './home-page/home-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import {FormsModule} from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+//social Login
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider,} from "angular-6-social-login";
+
+const appRoutes: Routes=[
+  {path: "homepage", component: HomePageComponent},
+  {path: "login", component: LoginComponent},
+  {path: "perfil", component: PerfilComponent},
+  {path: "register-page", component: RegisterPageComponent},
+  {path: "not-found-page", component: NotFoundPageComponent}
+]
+
+// Configs 
+export function getAuthServiceConfigs() {
+let config = new AuthServiceConfig(
+    [
+      {
+        id: FacebookLoginProvider.PROVIDER_ID,
+        provider: new FacebookLoginProvider("https://trabun-4b6cd.firebaseapp.com/__/auth/handler")
+      },
+      {
+        id: GoogleLoginProvider.PROVIDER_ID,
+        provider: new GoogleLoginProvider("410021138457-rgvjpro4h6hju7fgltekq2m0k781kre9.apps.googleusercontent.com")
+      },
+    ]
+);
+return config;
+}
+>>>>>>> upstream/master
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +156,7 @@ const appRoutes: Routes = [
     HomePageComponent,
     NavbarComponent,
     PerfilComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -113,6 +170,7 @@ const appRoutes: Routes = [
     MatButtonToggleModule,
     MatCardModule,
     MatCheckboxModule,
+<<<<<<< HEAD
     MatChipsModule,
     MatDatepickerModule,
     MatDialogModule,
@@ -153,6 +211,25 @@ const appRoutes: Routes = [
     AuthService, 
     HttpClientModule 
   ],
+=======
+    MatCardModule,
+    MaterialModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatChipsModule,
+    HttpModule,
+    JsonpModule,
+    FormsModule,
+    MatSnackBarModule,
+    RouterModule.forRoot(appRoutes),
+    SocialLoginModule
+  ],
+  providers: [AuthService,
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }],
+>>>>>>> upstream/master
   bootstrap: [AppComponent]
 })
 export class AppModule { }
