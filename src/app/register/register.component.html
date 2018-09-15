@@ -7,13 +7,10 @@
       <img src="../../assets/img/newuser.png" alt="" srcset="">
     </div> 
     
-<form formGroup="login" (ngSubmit)="onRegister()">
-    <p>Ingresa un correo:</p>
-    <input type="email" formControlName="email">
-    <br> 
-    <p>Ingresa una contraseña:</p>
-    <input type="password" formControlName="password">
-    <br>
-    <button mat-button routerLink="/login" type="submit" [disabled]="!authForm.valid">Registrarse</button>
-  </form> 
+<form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+  <p>Ingresa un correo: </p><input type="email" formControlName="email"><br> 
+  <p>Ingresa una contraseña: </p><input type="password" formControlName="password"><br>
+  <button mat-button type="submit" [disabled]="!authForm.valid">Registrarse</button>
+  </form>
 </div>  
+

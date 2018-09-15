@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular-6-social-login';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -8,27 +10,40 @@ import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private socialAuthService: AuthService) {}
+   authForm: FormGroup;
+ 
+   //Solicitamos en el constructor todas las cosas necesarias 
+   constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
+     this.createAuthForm();
+   }
+ 
+   ngOnInit() {
+   }
+ 
+   createAuthForm() {
+     this.authForm = this.formBuilder.group({
+       email: ['', Validators.compose([Validators.required, Validators.email])],
+       password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+     });
+   }
+ 
+   onRegister() {
+     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
+       .then(() => {
+         //Registro exitoso, celebremos esto!
+       })
+       .catch(() => {
+         //Algo salió mal, avisemos mejor para que reintente
+         this.snackBar.open('Error de registro, trata otra vez'
+           , null/*No necesitamos botón en el aviso*/
+           , {
+             duration: 3000
+           });
+       });
+   }
+ 
 
-  public socialSignIn(socialPlatform : string) {
-    let socialPlatformProvider;
-    if(socialPlatform == "facebook"){
-      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
-    }else if(socialPlatform == "google"){
-      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    } 
-    
-    this.socialAuthService.signIn(socialPlatformProvider).then(
-      (userData) => {
-        console.log(socialPlatform+" sign in data : " , userData);
-        // Now sign-in with userData
-        // ...
-            
-      }
-    );
-  }
-
-  ngOnInit() {
-  }
-
-}
+   
+ }
+ 
+ 
