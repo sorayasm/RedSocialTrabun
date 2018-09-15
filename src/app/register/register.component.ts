@@ -12,7 +12,6 @@ export class RegisterComponent implements OnInit {
 
    authForm: FormGroup;
  
-   //Solicitamos en el constructor todas las cosas necesarias 
    constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
      this.createAuthForm();
    }
@@ -28,22 +27,19 @@ export class RegisterComponent implements OnInit {
    }
  
    onRegister() {
-     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
-       .then(() => {
-         //Registro exitoso, celebremos esto!
-       })
-       .catch(() => {
-         //Algo salió mal, avisemos mejor para que reintente
-         this.snackBar.open('Error de registro, trata otra vez'
-           , null/*No necesitamos botón en el aviso*/
-           , {
-             duration: 3000
-           });
-       });
+    this.authService.signup(this.authForm.value.email, this.authForm.value.password)
+    .then(() => {
+      //Registro exitoso. Ingresemos los datos a la base de Datos
+    })
+    .catch(() => {
+      //Algo salió mal, avisemos mejor para que reintente
+      this.snackBar.open('Error de registro, trata otra vez'
+        , null/*No necesitamos botón en el aviso*/
+        , {
+          duration: 3000
+        });
+    });
    }
- 
-
-   
  }
  
  
