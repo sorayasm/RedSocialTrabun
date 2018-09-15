@@ -1,46 +1,34 @@
-<<<<<<< HEAD
 //Components
-=======
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MaterialModule } from './material.module';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatChipsModule} from '@angular/material/chips';
-import { HttpModule, JsonpModule } from '@angular/http';
-import {RouterModule, Routes} from '@angular/router';
-
->>>>>>> upstream/master
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { RegisterComponent } from './register/register.component';
 import { HomePageComponent } from './home-page/home-page.component'; // Muro
 import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { RegisterComponent } from './register/register.component';
 
-// Componentes
+// Funcionalidad y estilos
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider,} from "angular-6-social-login";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Firebase
-<<<<<<< HEAD
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../environments/environment';
-=======
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule} from '@angular/common/http';
 
->>>>>>> upstream/master
-import { AuthService } from './auth.service';
+//Formulario
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 //Animaciones y Material
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -79,15 +67,9 @@ import {
   MatTreeModule,
 } from '@angular/material';
 
-//Formulario
-import { ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { FormsModule } from '@angular/forms';
-
-// otros para eliminar errores
-import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
-import {HttpModule} from '@angular/http';
+//Otros
+import { environment } from '../environments/environment';
+import { AuthService } from './auth.service';
 
 //Variable de Rutas
 const appRoutes: Routes = [
@@ -107,28 +89,19 @@ const appRoutes: Routes = [
     path: 'wall',
     component: HomePageComponent
   },
+  {
+    path: 'profile',
+    component: PerfilComponent
+  },
+  {
+    path: 'profile',
+    component: PerfilComponent
+  },
+  {
+    path: "not-found-page", 
+    component: NotFoundPageComponent
+  }
 ];
-
-// Ng Module
-=======
-import { HomePageComponent } from './home-page/home-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RegisterPageComponent } from './register-page/register-page.component';
-import { PerfilComponent } from './perfil/perfil.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import {FormsModule} from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-//social Login
-import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider,} from "angular-6-social-login";
-
-const appRoutes: Routes=[
-  {path: "homepage", component: HomePageComponent},
-  {path: "login", component: LoginComponent},
-  {path: "perfil", component: PerfilComponent},
-  {path: "register-page", component: RegisterPageComponent},
-  {path: "not-found-page", component: NotFoundPageComponent}
-]
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -146,23 +119,32 @@ let config = new AuthServiceConfig(
 );
 return config;
 }
->>>>>>> upstream/master
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     WelcomeComponent,
-    RegisterComponent,
     HomePageComponent,
     NavbarComponent,
     PerfilComponent,
     NotFoundPageComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    NgbModule,
+    AngularFontAwesomeModule,
+    SocialLoginModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    BrowserAnimationsModule,
+    JsonpModule,
+    HttpModule,
+    HttpClientModule, 
+    ReactiveFormsModule,
+    FormsModule,
+    MaterialModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -170,7 +152,6 @@ return config;
     MatButtonToggleModule,
     MatCardModule,
     MatCheckboxModule,
-<<<<<<< HEAD
     MatChipsModule,
     MatDatepickerModule,
     MatDialogModule,
@@ -199,37 +180,19 @@ return config;
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ReactiveFormsModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes),
-    NgbModule,
-    AngularFontAwesomeModule,
-    HttpClientModule, 
-    HttpModule
-  ],
-  providers: [
-    AuthService, 
-    HttpClientModule 
-  ],
-=======
     MatCardModule,
-    MaterialModule,
     MatSidenavModule,
     MatToolbarModule,
     MatChipsModule,
-    HttpModule,
-    JsonpModule,
-    FormsModule,
     MatSnackBarModule,
-    RouterModule.forRoot(appRoutes),
-    SocialLoginModule
   ],
-  providers: [AuthService,
-    {
-      provide: AuthServiceConfig,
-      useFactory: getAuthServiceConfigs
-    }],
->>>>>>> upstream/master
+  providers: [ 
+    HttpClientModule,
+    AuthService,
+      {
+        provide: AuthServiceConfig,
+        useFactory: getAuthServiceConfigs
+      }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
