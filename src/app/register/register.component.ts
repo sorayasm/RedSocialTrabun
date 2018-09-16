@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class RegisterComponent implements OnInit {
    authForm: FormGroup;
    
-   constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
+   constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
      this.createAuthForm();
      //hacemos una consulta a la base de datos
    }
@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
   this.authService.signup(this.authForm.value.email, this.authForm.value.password)
   .then(() => {
     //Registro exitoso. Ingresemos los datos a la base de Datos y redireccionamos al login
+    this.router.navigate(['/wall']);
   })
   .catch(() => {
     //Algo salió mal, avisemos mejor para que reintente

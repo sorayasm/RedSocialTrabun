@@ -34,10 +34,8 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
-  /*ngOnInit() {
-   this.http.get("../assets/pokedex.json").subscribe(pokeData=>{
-     this.fullPokemonList = pokeData.json();
-   })
-    
-  }*/
+  
+  ngOnInit() {
+   
+  }
 }

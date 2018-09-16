@@ -28,7 +28,6 @@ export class AuthService {
           email: email,
           uid: user.user.uid,
         };
-    
         this.userList$.push(newUser);//esto agrega un nuevo User
       })
       .catch(err => {
@@ -37,19 +36,13 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
       .signInWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Nice, it worked!');
-      })
-      .catch(err => {
-        console.log('Something went wrong:',err.message);
-      });
   }
 
   logout() {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
       .signOut();
   }

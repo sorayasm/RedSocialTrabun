@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular-6-social-login';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -8,7 +9,7 @@ import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(private socialAuthService: AuthService) {}
+  constructor(private socialAuthService: AuthService, public router: Router) {}
 
   public socialSignIn(socialPlatform : string) {
     let socialPlatformProvider;
@@ -22,9 +23,7 @@ export class WelcomeComponent implements OnInit {
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         console.log(socialPlatform+" sign in data : " , userData);
-        // Now sign-in with userData
-        // ...
-            
+        this.router.navigate(['/wall']);
       }
     );
   }

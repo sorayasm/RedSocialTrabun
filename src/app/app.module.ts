@@ -110,7 +110,7 @@ let config = new AuthServiceConfig(
     [
       {
         id: FacebookLoginProvider.PROVIDER_ID,
-        provider: new FacebookLoginProvider("https://trabun-4b6cd.firebaseapp.com/__/auth/handler")
+        provider: new FacebookLoginProvider("291977651601728")
       },
       {
         id: GoogleLoginProvider.PROVIDER_ID,
