@@ -18,8 +18,9 @@ import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLogi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Firebase
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
 
@@ -139,6 +140,7 @@ return config;
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFireDatabaseModule, 
     JsonpModule,
     HttpModule,
     HttpClientModule, 
