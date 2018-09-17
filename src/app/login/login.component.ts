@@ -23,7 +23,6 @@ createLoginForm() {
   });
 }
 
-
 onLogin() {
 this.authService.login(this.authForm.value.email, this.authForm.value.password)
 .then(() => {

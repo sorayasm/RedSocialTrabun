@@ -1,8 +1,88 @@
-.example-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
+.register-div{
+  background-color: white;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.head {
+  text-align: center;
+  background-color: green;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width:100%;
+}
+.head h1{
+  font-size: 1em;
+  font-weight: 1200;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.banner {
+  background-image: url(../../assets/img/apple.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 15em;
+  position: fixed;
+  top: 3em;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.banner img{
+  width: 80px;
+  margin-top: 3em;
+  border: 2px solid white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+}
+
+form{
+  position: fixed;
+  top: 18em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logged{
+  position: fixed;
+  top: 18em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: green;
+  font-weight: 1200;
+}
+
+.register-buttons{
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+ 
+}
+
+button{
+  width: 100%;
+  background-color: green;
+  color: white;
+  margin-top: 1em;
+}
+
+button:hover{
+  background-color: #d67d5c;
+  color: white;
+}
