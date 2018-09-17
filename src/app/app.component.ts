@@ -17,7 +17,6 @@ export class AppComponent {
       email:string;
       password:string;
     
-
   constructor(private http: Http, public authService: AuthService, route: ActivatedRoute) {
     const url :Observable<string> = route.url.pipe(map(segments => segments.join('')));
   }
@@ -35,10 +34,8 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
-  /*ngOnInit() {
-   this.http.get("../assets/pokedex.json").subscribe(pokeData=>{
-     this.fullPokemonList = pokeData.json();
-   })
-    
-  }*/
+  
+  ngOnInit() {
+   
+  }
 }

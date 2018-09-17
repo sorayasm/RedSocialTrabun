@@ -1,0 +1,12 @@
+<div class="welcome-div">
+  <div class="logo">
+    <img src="../../assets/img/logo.png" alt="Trabun" srcset="">
+    <h1>Trabún</h1>
+  </div>
+  <div class="welcome-buttons">
+    <button mat-button routerLink="/login">Login</button>
+    <button mat-button routerLink="/register">Registrarme</button>
+    <button mat-button class="loginBtn loginBtn--facebook" (click)="socialSignIn('facebook')">Ingresar con Facebook</button>
+    <button mat-button class="loginBtn loginBtn--google g-signin2" (click)="socialSignIn('google')">Ingresar con Google</button> 
+  </div>
+</div>
