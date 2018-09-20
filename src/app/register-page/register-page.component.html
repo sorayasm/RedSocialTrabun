@@ -1,3 +1,19 @@
-<p>
-  register-page works!
-</p>
+<!--ngIf desaparecerá lo que esta dentro del div-->
+<mat-toolbar color="primary">
+  <span>Welcome {{ (authService.user | async)?.email }}</span>
+</mat-toolbar>
+<mat-toolbar color="primary">
+  <input type="text" class="form-control" [(ngModel)]="name" placeholder="Nombre">
+  <input type="text" class="form-control" [(ngModel)]="email" placeholder="email">
+  <input type="password" class="form-control" [(ngModel)]="password" placeholder="password">
+  <button (click)="signup()" [disabled]="!email || !password">Signup</button>
+  <button (click)="login()" [disabled]="!email || !password">Login</button>
+  <button (click)="logout()">Logout</button>
+</mat-toolbar>
+<mat-toolbar color=primary>
+<h1>
+  Sign in
+</h1>
+
+<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+<button (click)="socialSignIn('google')" class="g-signin2">Sign in with Google</button>

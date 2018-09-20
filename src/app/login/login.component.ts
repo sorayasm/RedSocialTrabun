@@ -11,7 +11,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
  loginForm: FormGroup;
-  
  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
   this.createLoginForm();
 }
@@ -21,19 +20,20 @@ export class LoginComponent implements OnInit {
 
   createLoginForm() {
     this.loginForm = this.formBuilder.group({
-      email: ["", Validators.compose([Validators.required, Validators.email])],
-      password: ["", Validators.compose([Validators.required, Validators.minLength(6)])]
+      // name: ['', Validators.compose([Validators.required, Validators.name])],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
   }
 
-  //Snackbar de error
+  // Snackbar de error
   onRegister() {
-    this.authService.signup(this.loginForm.value.email, this.loginForm.value.password)
+    this.authService.signup(this.loginForm.value.name, this.loginForm.value.email, this.loginForm.value.password)
       .then(() => {
-        //Registro exitoso, celebremos esto!
+        console.log('Registro exitoso!');
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
+        // Algo salió mal, avisemos mejor para que reintente
         this.snackBar.open('Error de registro, intenta otra vez'
           , null/*No necesitamos botón en el aviso*/
           , {
@@ -45,11 +45,11 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.authService.login(this.loginForm.value.email, this.loginForm.value.password)
     .then(() => {
-      //Login exitoso, así que celebramos con el usuario (?)
+      console.log('Login exitoso!');
     })
     .catch(() => {
-      //Algo salió mal, avisemos mejor para que reintente
-      this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
+      // Algo salió mal, avisemos mejor para que reintente
+      this.snackBar.open('Error al tratar de iniciar sesión, intenta otra vez'
         , null/*No necesitamos botón en el aviso*/
         , {
           duration: 3000
@@ -60,11 +60,11 @@ export class LoginComponent implements OnInit {
    onLogout() {
     this.authService.logout()
       .then(() => {
-        //Logout exitoso, adios usuario!
+       console.log('Logout exitoso, adios!');
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
-        this.snackBar.open('Error al tratar de cerrar sesión, trata otra vez'
+        // Algo salió mal, avisemos mejor para que reintente
+        this.snackBar.open('Error al tratar de cerrar sesión, intenta otra vez'
           , null/*No necesitamos botón en el aviso*/
           , {
             duration: 3000

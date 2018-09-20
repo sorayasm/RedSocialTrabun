@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-//Firebase
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app'
+// Firebase
+import { AngularFireAuth } from '@angular/fire/auth';
+// import * as firebase from 'firebase/app'
 import { Observable } from 'rxjs';
 
 
@@ -12,38 +12,23 @@ import { Observable } from 'rxjs';
 export class AuthService {
   user: Observable<firebase.User>;
 
-  constructor(private firebaseAuth: AngularFireAuth) { 
+  constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
   }
 
-  signup(email: string, password: string) {
-    this.firebaseAuth
-      .auth
-      .createUserWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Success!', value);
-      })
-      .catch(err => {
-        console.log('Something went wrong:',err.message);
-      });    
+  signup( name: string, email: string, password: string ) {
+    return this.firebaseAuth
+    .auth
+    .createUserWithEmailAndPassword(email, password);
   }
 
   login(email: string, password: string) {
-    this.firebaseAuth
+     return this.firebaseAuth
       .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Nice, it worked!');
-      })
-      .catch(err => {
-        console.log('Something went wrong:',err.message);
-      });
+      .signInWithEmailAndPassword(email, password);
   }
 
   logout() {
-    this.firebaseAuth
-      .auth
-      .signOut();
+     return this.firebaseAuth.auth.signOut();
   }
 }
-

@@ -1,8 +1,9 @@
 <mat-sidenav-container>
-    <mat-toolbar color="primary">
-        <span>Bienvenido {{ (authService.user | async)?.email }}</span>
+<!--    <mat-toolbar color="primary">
+        <span>Welcome {{ (authService.user | async)?.email }}</span>
     </mat-toolbar>
     <mat-toolbar color="primary">
+        <input type="text" class="form-control" [(ngModel)]="name" placeholder="Nombre">
         <input type="text" class="form-control" [(ngModel)]="email" placeholder="email">
         <input type="password" class="form-control" [(ngModel)]="password" placeholder="password">
         <button (click)="signup()" [disabled]="!email || !password">Signup</button>
@@ -12,8 +13,8 @@
     <mat-toolbar color=primary>
         <a routerLink="/home-page" routerLinkActive="active">Trabún</a><span>   </span>
         <a routerLink="/perfil" routerLinkActive="active">Perfil</a><span>   </span>
-        <h2>{{url}}</h2>
-    </mat-toolbar>
+        
+    </mat-toolbar> -->
 
     <router-outlet>
 
