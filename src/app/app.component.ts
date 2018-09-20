@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   signup() {
-    this.authService.signup(this.name, this.email, this.password);
+    this.authService.signup(this.email, this.password);
     this.name = this.email = this.password = '';
   }
 
