@@ -1,51 +1,43 @@
-<<<<<<< HEAD
 <!--ngIf desaparecerá lo que esta dentro del div-->
-<!-- <div *ngIf="authService.user | async">
+<!-- <div *ngIf='authService.user | async'>
   <p>Bienvenido : {{(authService.user | async).name}}</p>
-  <button type="button" (click)="onLogout()">Logout</button>
+  <button type='button' (click)='onLogout()'>Logout</button>
 </div>
-<form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
-  <input type="text" formControlName="name">
-  <input type="email" formControlName="email">
-  <input type="password" formControlName="password">
-  <button type="submit" [disabled]="!authForm.valid">Registrarse</button> -->
-  <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
-<!-- <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button> -->
+<form [formGroup]='authForm' (ngSubmit)='onRegister()' *ngIf='!(authService.user | async)'>
+  <input type='text' formControlName='name'>
+  <input type='email' formControlName='email'>
+  <input type='password' formControlName='password'>
+  <button type='submit' [disabled]='!authForm.valid'>Registrarse</button>
+  <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form -->
+<!-- <button type='button' (click)='onLogin()' [disabled]='!authForm.valid'>Log - in</button> -->
   <!--Ejecutará onLogin-->
-<!-- </form>
+<!-- </form> -->
 <h1>
-=======
-<div class="login-div">
-  <div class="head">
+<div class='login-div'>
+  <div class='head'>
     <h1>Login</h1>
   </div>
-  <div class="banner">
-    <img src="../../assets/img/newuser.png" alt="" srcset="">
+  <div class='banner'>
+    <img src='../../assets/img/newuser.png' alt='' srcset=''>
   </div> 
-  <form [formGroup]="authForm" *ngIf="!(authService.user | async)">
+  <form [formGroup]='authForm' *ngIf='!(authService.user | async)'>
     <p>Ingresa tu usuario:</p>
-    <input type="email" formControlName="email"><br>
+    <input type='email' formControlName='email'><br>
     <p>Ingresa tu contraseña:</p>
-    <input type="password" formControlName="password"><br>
-    <button mat-button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Ingresar</button><br>
-    <button mat-button routerLink="/register">Ir a Registro</button>
+    <input type='password' formControlName='password'><br>
+    <button mat-button type='button' (click)='onLogin()' [disabled]='!authForm.valid'>Ingresar</button><br>
+    <button mat-button routerLink='/register'>Ir a Registro</button>
   </form>
-  <div class="logged" *ngIf="authService.user | async">
+  <div class='logged' *ngIf='authService.user | async'>
     <p>Ya ingresaste {{(authService.user | async).email}}</p>
     <p> Por favor elige una opción:</p>
-    <button mat-button routerLink="/wall">Ir al muro</button>
-    <button mat-button type="button" (click)="onLogout()">Salir</button>
+    <button mat-button routerLink='/wall'>Ir al muro</button>
+    <button mat-button type='button' (click)='onLogout()'>Salir</button>
   </div>
 </div>
-<!-- h1>
->>>>>>> c60297ac3ae1d2910e3c317134c31285c2c651fe
+<h1>
   Sign in
-</h1>
+</h1> 
 
 <button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
-<<<<<<< HEAD
-<button (click)="socialSignIn('google')" class="g-signin2">Sign in with Google</button> -->
-=======
-<button (click)="socialSignIn('google')" class="g-signin2">Sign in with Google</button>   
--->
->>>>>>> c60297ac3ae1d2910e3c317134c31285c2c651fe
+<button (click)="socialSignIn('google')" class='g-signin2'>Sign in with Google</button>

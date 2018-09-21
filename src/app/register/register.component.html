@@ -1,19 +1,19 @@
 
-  <div class="register-div">
-    <div class="head">
+  <div class='register-div'>
+    <div class='head'>
       <h1>Registro</h1>
     </div>
-    <div class="banner">
-      <img src="../../assets/img/newuser.png" class="img-fluid" alt="" srcset="">
+    <div class='banner'>
+      <img src='../../assets/img/newuser.png' class='img-fluid' alt='' srcset=''>
     </div> 
     
-<form [formGroup]="authForm" (ngSubmit)="onRegister()">
+<form [formGroup]='authForm' (ngSubmit)='onRegister()'>
   <p>Ingresa un correo: </p>
-  <input type="email" formControlName="email"><br> 
+  <input type='email' formControlName='email'><br> 
   <p>Ingresa una contraseña: </p>
-  <input type="password" formControlName="password"><br>
-  <button mat-button type="submit" [disabled]="!authForm.valid">Registrarse</button> <br>
-  <button mat-button routerLink="/login">Ir a Login</button>
+  <input type='password' formControlName='password'><br>
+  <button mat-button type='submit' [disabled]='!authForm.valid'>Registrarse</button> <br>
+  <button mat-button routerLink='/login'>Ir a Login</button>
   </form>
 </div>  
 
