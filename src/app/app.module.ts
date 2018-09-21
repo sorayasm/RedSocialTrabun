@@ -75,8 +75,8 @@ import { AuthService } from './auth.service';
 //Variable de Rutas
 const appRoutes: Routes = [
   {
-    path : '',
-    component : WelcomeComponent
+    path: '',
+    component: WelcomeComponent
   },
   {
     path: 'login',

@@ -1,25 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" routerLink="/wall"><span class="text-danger">Trabún</span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-menu-item [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+      <span>Menu</span>
+    </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>art_track</mat-icon>
+          <span>Publicaciones</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>store</mat-icon>
+          <span>Directorio de Productores</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>restaurant</mat-icon>
+          <span>Recetas</span>
+        </button>
+      </mat-menu>
+    <button mat-menu-item>
+      <mat-icon>home</mat-icon> 
+      <span>Inicio</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>people</mat-icon> 
+      <span>Amigos</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon> 
+      <span>Perfil</span>
+    </button>
+  </mat-toolbar-row>
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link"routerLink="/wall">Inicio</a>
-      </li>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link">Mi perfil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Mis amigos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" >Logout</a>
-          </li>
-        </ul>
-    </ul>
-  </div>
-</nav>
+
