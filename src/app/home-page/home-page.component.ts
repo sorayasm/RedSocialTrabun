@@ -11,14 +11,13 @@ import { Observable } from 'rxjs';
 export class HomePageComponent implements OnInit {
   public posts$:Observable<any[]>;
 
-  constructor(private database:AngularFireDatabase) { }
+  constructor(private database:AngularFireDatabase) { 
+    this.posts$ = this.database.list('/post').valueChanges();
+  }
 
   ngOnInit() {
-    this.posts$ = this.getPost('/posts');
+    
   }
 
-  getPost(path){
-    return this.database.getPost(path)
-  }
 
 }

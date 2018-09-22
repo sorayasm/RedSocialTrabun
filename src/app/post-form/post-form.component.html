@@ -1,13 +1,22 @@
 <form [formGroup]="postForm" (ngSubmit)="addPost()">
-  <p>Título (obligatorio)</p>
-  <input #title type="text" formControlName="title">
-  <p *ngIf="postForm.get('title').errors && postForm.get('title').errors.required && (postForm.get('title').dirty || postForm.get('title').touched)"
-    style="color:red;">Debes escribir un título para el post</p>
-  <p>Imagen</p>
-  <input #image type="text" formControlName="image">
-  <p>Contenido (obligatorio)</p>
-  <input #description type="text" formControlName="content">
-  <button type="submit" [disabled]="!postForm.valid">
+  <p>Te invitamos a dejar un post en nuestra comunidad:</p> 
+  <mat-form-field>
+    <p>Título del post</p>
+    <input matInput #title type="text" formControlName="title">
+    <p *ngIf="postForm.get('title').errors && postForm.get('title').errors.required && (postForm.get('title').dirty || postForm.get('title').touched)" style="color:red;">Debes escribir un título para tu post</p>
+  </mat-form-field>
+  <mat-form-field>
+    <p>Url de Imagen</p>
+    <input matInput #image type="text" formControlName="image">
+    <p *ngIf="postForm.get('image').errors && postForm.get('image').errors.required && (postForm.get('image').dirty || postForm.get('image').touched)" style="color:red;">Agrega una url de una imagen para tu post</p>
+  </mat-form-field>
+  <mat-form-field>
+    <p>Contenido</p>
+    <textarea  matInput #description type="text" formControlName="content"></textarea>
+    <p *ngIf="postForm.get('content').errors && postForm.get('content').errors.required && (postForm.get('content').dirty || postForm.get('content').touched)"
+    style="color:red;">Incluye contenido para tu post</p>
+  </mat-form-field>
+  <button mat-button type="submit" [disabled]="!postForm.valid">
     ¡Agrega tu post!
   </button>
 </form>
