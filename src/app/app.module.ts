@@ -74,6 +74,9 @@ import {
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 import { RecipesComponent } from './recipes/recipes.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { PostWallComponent } from './post-wall/post-wall.component';
+import { ProfileWallComponent } from './profile-wall/profile-wall.component';
 
 
 //Variable de Rutas
@@ -145,6 +148,9 @@ return config;
     FriendsComponent,
     ProducerComponent,
     RecipesComponent,
+    PostFormComponent,
+    PostWallComponent,
+    ProfileWallComponent,
   ],
   imports: [
     BrowserModule,
