@@ -2,11 +2,13 @@
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { HomePageComponent } from './home-page/home-page.component'; // Muro
+import { HomePageComponent } from './home-page/home-page.component'; 
 import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { RegisterComponent } from './register/register.component';
+import { FriendsComponent } from './friends/friends.component';
+import { ProducerComponent } from './producer/producer.component';
 
 // Funcionalidad y estilos
 import { NgModule } from '@angular/core';
@@ -20,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
 
@@ -71,6 +73,8 @@ import {
 //Otros
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
+import { RecipesComponent } from './recipes/recipes.component';
+
 
 //Variable de Rutas
 const appRoutes: Routes = [
@@ -95,8 +99,16 @@ const appRoutes: Routes = [
     component: PerfilComponent
   },
   {
-    path: 'profile',
-    component: PerfilComponent
+    path: 'friends',
+    component: FriendsComponent
+  },
+  {
+    path: 'producer',
+    component: ProducerComponent
+  },
+  {
+    path: 'recipes',
+    component: RecipesComponent
   },
   {
     path: "not-found-page", 
@@ -130,6 +142,9 @@ return config;
     PerfilComponent,
     NotFoundPageComponent,
     RegisterComponent,
+    FriendsComponent,
+    ProducerComponent,
+    RecipesComponent,
   ],
   imports: [
     BrowserModule,

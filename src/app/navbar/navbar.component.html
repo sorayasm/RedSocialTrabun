@@ -5,31 +5,32 @@
       <span>Menu</span>
     </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>art_track</mat-icon>
-          <span>Publicaciones</span>
+        <button mat-menu-item routerLink="/wall">
+          <mat-icon>home</mat-icon> 
+          <span>Inicio</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/friends">
+          <mat-icon>people</mat-icon> 
+          <span>Amigos</span>
+        </button>
+        <button mat-menu-item routerLink="/profile">
+          <mat-icon>account_circle</mat-icon> 
+          <span>Perfil</span>
+        </button>
+        <button mat-menu-item routerLink="/producer">
           <mat-icon>store</mat-icon>
           <span>Directorio de Productores</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/recipes">
           <mat-icon>restaurant</mat-icon>
           <span>Recetas</span>
         </button>
+        <button mat-menu-item routerLink="/recipes">
+          <mat-icon>restaurant</mat-icon>
+          <span>Salir</span>
+        </button>
       </mat-menu>
-    <button mat-menu-item>
-      <mat-icon>home</mat-icon> 
-      <span>Inicio</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>people</mat-icon> 
-      <span>Amigos</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>account_circle</mat-icon> 
-      <span>Perfil</span>
-    </button>
+        <p>Hola! {{(authService.user | async).username}}</p>
   </mat-toolbar-row>
 
 
