@@ -1,3 +1,13 @@
-<p>
-  post-form works!
-</p>
+<form [formGroup]="postForm" (ngSubmit)="addPost()">
+  <p>Título (obligatorio)</p>
+  <input #title type="text" formControlName="title">
+  <p *ngIf="postForm.get('title').errors && postForm.get('title').errors.required && (postForm.get('title').dirty || postForm.get('title').touched)"
+    style="color:red;">Debes escribir un título para el post</p>
+  <p>Imagen</p>
+  <input #image type="text" formControlName="image">
+  <p>Contenido (obligatorio)</p>
+  <input #description type="text" formControlName="content">
+  <button type="submit" [disabled]="!postForm.valid">
+    ¡Agrega tu post!
+  </button>
+</form>

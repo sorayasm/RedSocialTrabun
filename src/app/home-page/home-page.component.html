@@ -1,2 +1,7 @@
 
 <app-navbar></app-navbar>
+<app-post-form></app-post-form>
+<app-home-page *ngFor="let post of (posts$)" 
+[title]="post.title"
+[image]="post.image"
+[content]="post.content"></app-home-page>

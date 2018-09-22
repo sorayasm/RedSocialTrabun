@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 
@@ -9,13 +9,16 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  users$:Observable<any>; 
-  constructor(private database:AngularFireDatabase) { 
+  public posts$:Observable<any[]>;
 
-    this.users$ = this.database.list('/users').valueChanges();
-  }
+  constructor(private database:AngularFireDatabase) { }
 
   ngOnInit() {
+    this.posts$ = this.getPost('/posts');
+  }
+
+  getPost(path){
+    return this.database.getPost(path)
   }
 
 }

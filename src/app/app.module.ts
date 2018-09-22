@@ -9,6 +9,9 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { RegisterComponent } from './register/register.component';
 import { FriendsComponent } from './friends/friends.component';
 import { ProducerComponent } from './producer/producer.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { ProfileWallComponent } from './profile-wall/profile-wall.component';
 
 // Funcionalidad y estilos
 import { NgModule } from '@angular/core';
@@ -73,10 +76,6 @@ import {
 //Otros
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
-import { RecipesComponent } from './recipes/recipes.component';
-import { PostFormComponent } from './post-form/post-form.component';
-import { PostWallComponent } from './post-wall/post-wall.component';
-import { ProfileWallComponent } from './profile-wall/profile-wall.component';
 
 
 //Variable de Rutas
@@ -149,8 +148,7 @@ return config;
     ProducerComponent,
     RecipesComponent,
     PostFormComponent,
-    PostWallComponent,
-    ProfileWallComponent,
+    ProfileWallComponent
   ],
   imports: [
     BrowserModule,
