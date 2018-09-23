@@ -1,4 +1,4 @@
-//Components
+// Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -19,22 +19,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider,} from "angular-6-social-login";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatChipsModule } from '@angular/material/chips';
 
-//Firebase
+// Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
 
-//Formulario
+// Formulario
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
-//Animaciones y Material
-import { MaterialModule } from './material.module';
+// Animaciones y Material
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -43,7 +44,6 @@ import {
   MatButtonToggleModule,
   MatCardModule,
   MatCheckboxModule,
-  MatChipsModule,
   MatDatepickerModule,
   MatDialogModule,
   MatDividerModule,
@@ -61,7 +61,6 @@ import {
   MatRadioModule,
   MatRippleModule,
   MatSelectModule,
-  MatSidenavModule,
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
@@ -69,17 +68,16 @@ import {
   MatStepperModule,
   MatTableModule,
   MatTabsModule,
-  MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
 
-//Otros
+// Otros
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 
+// Variable de Rutas
 
-//Variable de Rutas
 const appRoutes: Routes = [
   {
     path: '',
@@ -119,22 +117,8 @@ const appRoutes: Routes = [
   }
 ];
 
-// Configs 
-export function getAuthServiceConfigs() {
-let config = new AuthServiceConfig(
-    [
-      {
-        id: FacebookLoginProvider.PROVIDER_ID,
-        provider: new FacebookLoginProvider("291977651601728")
-      },
-      {
-        id: GoogleLoginProvider.PROVIDER_ID,
-        provider: new GoogleLoginProvider("410021138457-rgvjpro4h6hju7fgltekq2m0k781kre9.apps.googleusercontent.com")
-      },
-    ]
-);
-return config;
-}
+// Configs
+export function getAuthServiceConfigs() { }
 @NgModule({
   declarations: [
     AppComponent,
@@ -156,17 +140,15 @@ return config;
     RouterModule.forRoot(appRoutes),
     NgbModule,
     AngularFontAwesomeModule,
-    SocialLoginModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, 'Trabun'), // imports firebase/app needed for everything
     AngularFireAuthModule,
-    AngularFireDatabaseModule, 
+    AngularFireDatabaseModule,
     JsonpModule,
     HttpModule,
-    HttpClientModule, 
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -204,18 +186,13 @@ return config;
     MatTooltipModule,
     MatTreeModule,
     MatCardModule,
-    MatSidenavModule,
-    MatToolbarModule,
     MatChipsModule,
-    MatSnackBarModule,
+    MatSnackBarModules,
   ],
-  providers: [ 
+  providers: [
     HttpClientModule,
     AuthService,
-      {
-        provide: AuthServiceConfig,
-        useFactory: getAuthServiceConfigs
-      }],
+      ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
