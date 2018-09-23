@@ -66,15 +66,15 @@ export class AuthService {
     );
   }
 
-  isLoggedIn() {
+  /*isLoggedIn() {
     if (this.userDetails == null ) {
         return false;
       } else {
         return true;
       }
-    }
+    }*/
   logout() {
-      this.firebaseAuth.auth.signOut()
+     return  this.firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/']));
     }
 

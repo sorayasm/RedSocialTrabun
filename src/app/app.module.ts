@@ -25,7 +25,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
-// import { AngularFireDatabase } from '@angular/fire/database';
 
 // Formulario
 import { ReactiveFormsModule } from '@angular/forms';
@@ -164,7 +163,6 @@ export function getAuthServiceConfigs() { }
     MatCardModule,
     MatChipsModule,
     MatSnackBarModule,
-    // AngularFireDatabase,
   ],
   providers: [
     HttpClientModule,

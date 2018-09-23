@@ -13,16 +13,11 @@
     <button mat-button type='button' (click)='onLogin()' [disabled]='!authForm.valid'>Ingresar</button><br>
     <button mat-button routerLink='/register'>Ir a Registro</button>
   </form>
-  <div class='logged' *ngIf='authService.user | async'>
+  <div class='logged' *ngIf='(authService.user | async)'>
     <p>Ya ingresaste {{(authService.user | async).email}}</p>
     <p> Por favor elige una opción:</p>
     <button mat-button routerLink='/wall'>Ir al muro</button>
     <button mat-button type='button' (click)='onLogout()'>Salir</button>
   </div>
 </div>
-<h1>
-  Sign in
-</h1> 
 
-<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
-<button (click)="socialSignIn('google')" class='g-signin2'>Sign in with Google</button>
