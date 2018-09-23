@@ -2,11 +2,16 @@
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { HomePageComponent } from './home-page/home-page.component'; // Muro
+import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { RegisterComponent } from './register/register.component';
+import { FriendsComponent } from './friends/friends.component';
+import { ProducerComponent } from './producer/producer.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { ProfileWallComponent } from './profile-wall/profile-wall.component';
 
 // Funcionalidad y estilos
 import { NgModule } from '@angular/core';
@@ -46,6 +51,7 @@ import {
   MatGridListModule,
   MatIconModule,
   MatInputModule,
+  MatFormFieldModule,
   MatListModule,
   MatMenuModule,
   MatNativeDateModule,
@@ -71,10 +77,11 @@ import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 
 // Variable de Rutas
+
 const appRoutes: Routes = [
   {
-    path : '',
-    component : WelcomeComponent
+    path: '',
+    component: WelcomeComponent
   },
   {
     path: 'login',
@@ -91,6 +98,18 @@ const appRoutes: Routes = [
   {
     path: 'profile',
     component: PerfilComponent
+  },
+  {
+    path: 'friends',
+    component: FriendsComponent
+  },
+  {
+    path: 'producer',
+    component: ProducerComponent
+  },
+  {
+    path: 'recipes',
+    component: RecipesComponent
   },
   {
     path: 'not-found-page',
@@ -110,6 +129,11 @@ export function getAuthServiceConfigs() { }
     PerfilComponent,
     NotFoundPageComponent,
     RegisterComponent,
+    FriendsComponent,
+    ProducerComponent,
+    RecipesComponent,
+    PostFormComponent,
+    ProfileWallComponent
   ],
   imports: [
     BrowserModule,
@@ -140,6 +164,7 @@ export function getAuthServiceConfigs() { }
     MatGridListModule,
     MatIconModule,
     MatInputModule,
+    MatFormFieldModule,
     MatListModule,
     MatMenuModule,
     MatNativeDateModule,
@@ -162,7 +187,6 @@ export function getAuthServiceConfigs() { }
     MatTreeModule,
     MatCardModule,
     MatChipsModule,
-    MatSnackBarModule,
   ],
   providers: [
     HttpClientModule,
