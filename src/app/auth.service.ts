@@ -50,4 +50,9 @@ export class AuthService {
   }
 }
 
-
+export class User{
+  email: string;
+  uid: string;
+  username: string; 
+  photoUrl: string;
+}
