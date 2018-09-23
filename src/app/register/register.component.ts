@@ -45,7 +45,5 @@ export class RegisterComponent implements OnInit {
 
   onLogout() {
    return this.authService.logout()
-    }
-  
+  }
 }
-

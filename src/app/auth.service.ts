@@ -39,8 +39,8 @@ export class AuthService {
         const newUser = { // tipo inferido
           email: email,
           uid: user.user.uid,
-          username: email, 
-          photoUrl: "https://www.pekoda.com/images/default.png",
+          username: email,
+          photoUrl: 'https://www.pekoda.com/images/default.png',
         };
         this.userList$.push(newUser); // esto agrega un nuevo User
       })
@@ -67,7 +67,7 @@ export class AuthService {
     );
   }
 
-  isLoggedIn() {
+isLoggedIn() {
     if (this.userDetails == null ) {
         return false;
       } else {
@@ -75,8 +75,10 @@ export class AuthService {
       }
     }
     
+    }
+
   logout() {
-      this.firebaseAuth.auth.signOut()
+     return  this.firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/']));
     }
 

@@ -8,13 +8,11 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
   styleUrls: ['./friends.component.css']
 })
 export class FriendsComponent implements OnInit {
-  public users$:Observable<any[]>;
-  constructor(private database:AngularFireDatabase) {
+  public users$: Observable<any[]>;
+  constructor(private database: AngularFireDatabase) {
     this.users$ = database.list('/users').valueChanges();
   }
   ngOnInit() {
-    
   }
-  
 
 }
