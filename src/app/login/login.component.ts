@@ -10,13 +10,13 @@ import { Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- loginForm: FormGroup;
+ authForm: FormGroup;
  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
   this.createLoginForm();
 }
 
   createLoginForm() {
-    this.loginForm = this.formBuilder.group({
+    this.authForm = this.formBuilder.group({
       email: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
@@ -24,9 +24,10 @@ export class LoginComponent implements OnInit {
 
   // Snackbar de error
   onRegister() {
-    this.authService.signup(this.loginForm.value.email, this.loginForm.value.password)
+    this.authService.signup(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
         console.log('Registro exitoso!');
+        this.router.navigate(['/wall']);
       })
       .catch(() => {
         // Algo salió mal, avisemos mejor para que reintente
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
       }
 
 onLogin() {
-this.authService.login(this.loginForm.value.email, this.loginForm.value.password)
+this.authService.login(this.authForm.value.email, this.authForm.value.password)
 .then(() => {
     // Login exitoso, así que celebramos con el usuario (?)
     this.router.navigate(['/wall']);
