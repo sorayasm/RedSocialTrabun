@@ -186,8 +186,7 @@ export function getAuthServiceConfigs() { }
     MatTooltipModule,
     MatTreeModule,
     MatCardModule,
-    MatChipsModule,
-    MatSnackBarModules,
+    MatChipsModule
   ],
   providers: [
     HttpClientModule,

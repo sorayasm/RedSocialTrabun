@@ -5,6 +5,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
 import { auth } from 'firebase/app';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-welcome',
@@ -22,7 +23,7 @@ export class WelcomeComponent implements OnInit {
 @Injectable()
 export class AppComponent {
 
-  constructor(private firebaseAuth: AngularFireAuth, private router: Router) { }
+  constructor(private firebaseAuth: AngularFireAuth, private router: Router, private authService: AuthService) { }
 
   signInWithFacebook() {
     this.authService.signInWithFacebook()

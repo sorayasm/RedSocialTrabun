@@ -4,6 +4,9 @@
 
 <ul>
     <li *ngFor="let user of users$ | async">
-       {{ user.email }}
+    {{ user.username }}
+       <img class="profilepic" src="{{user.photoUrl}}" alt="" srcset="">
     </li>
   </ul>
+
+  
