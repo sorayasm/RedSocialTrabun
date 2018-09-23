@@ -1,22 +1,34 @@
 import { Injectable } from '@angular/core';
-
+import { Router } from '@angular/router';
 // Firebase
 import { AngularFireAuth } from '@angular/fire/auth';
 // import * as firebase from 'firebase/app'
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireList } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AuthService {
-  user: Observable<firebase.User>;
+  private user: Observable<firebase.User>;
+  private userDetails: firebase.User = null;
   userList$: AngularFireList<any>;
-  constructor(private firebaseAuth: AngularFireAuth, private database: AngularFireDatabase ) {
+  constructor(private firebaseAuth: AngularFireAuth, private database: AngularFireDatabase, private router: Router ) {
     this.user = firebaseAuth.authState;
     this.userList$ = this.database.list('/users');
+  this.user.subscribe(
+    (user) => {
+      if (user) {
+        this.userDetails = user;
+        console.log(this.userDetails);
+      } else {
+        this.userDetails = null;
+      }
+    }
+  );
   }
 
   signup(email: string, password: string) {
@@ -42,7 +54,28 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password);
   }
 
+  signInWithFacebook() {
+    return this.firebaseAuth.auth.signInWithPopup(
+      new firebase.auth.FacebookAuthProvider()
+    );
+  }
+
+  signInWithGoogle() {
+    return this.firebaseAuth.auth.signInWithPopup(
+      new firebase.auth.GoogleAuthProvider()
+    );
+  }
+
+  isLoggedIn() {
+    if (this.userDetails == null ) {
+        return false;
+      } else {
+        return true;
+      }
+    }
   logout() {
-     return this.firebaseAuth.auth.signOut();
-}
+      this.firebaseAuth.auth.signOut()
+      .then((res) => this.router.navigate(['/']));
+    }
+
 }

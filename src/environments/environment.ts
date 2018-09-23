@@ -11,7 +11,7 @@ export const environment = {
     projectId: 'trabun-4b6cd',
     storageBucket: 'trabun-4b6cd.appspot.com',
     messagingSenderId: '410021138457'
-  }
+  },
 };
 
 /*

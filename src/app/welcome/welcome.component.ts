@@ -1,34 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular-6-social-login';
 import { Router} from '@angular/router';
+import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+import { Observable } from 'rxjs';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
+
 export class WelcomeComponent implements OnInit {
 
-  constructor(private socialAuthService: AuthService, public router: Router) {}
-
-  public socialSignIn(socialPlatform: string) {
-    let socialPlatformProvider;
-    if (socialPlatform === 'facebook') {
-      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
-    } else if (socialPlatform === 'google') {
-      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    }
-    this.socialAuthService.signIn(socialPlatformProvider).then(
-      (userData) => {
-        console.log(socialPlatform + ' sign in data : ' , userData);
-        // Now sign-in with userData
-        // ...
-        this.router.navigate(['/wall']);
-      }
-    );
+  ngOnInit() {
   }
 
-  ngOnInit() {
+}
+
+@Injectable()
+export class AppComponent {
+
+  constructor(private firebaseAuth: AngularFireAuth, private router: Router) { }
+
+  signInWithFacebook() {
+    this.authService.signInWithFacebook()
+    .then((res) => {
+        this.router.navigate(['wall']);
+      })
+    .catch((err) => console.log(err));
+  }
+
+  signInWithGoogle() {
+    this.authService.signInWithGoogle()
+    .then((res) => {
+        this.router.navigate(['wall']);
+      })
+    .catch((err) => console.log(err));
   }
 
 }

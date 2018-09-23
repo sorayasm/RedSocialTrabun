@@ -14,7 +14,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular-6-social-login';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,10 +22,10 @@ import { MatChipsModule } from '@angular/material/chips';
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
-import { AuthGuard } from './auth.guard';
+// import { AngularFireDatabase } from '@angular/fire/database';
 
 // Formulario
 import { ReactiveFormsModule } from '@angular/forms';
@@ -101,21 +100,7 @@ const appRoutes: Routes = [
 ];
 
 // Configs
-export function getAuthServiceConfigs() {
-const config = new AuthServiceConfig(
-    [
-      {
-        id: FacebookLoginProvider.PROVIDER_ID,
-        provider: new FacebookLoginProvider('291977651601728')
-      },
-      {
-        id: GoogleLoginProvider.PROVIDER_ID,
-        provider: new GoogleLoginProvider('410021138457-rgvjpro4h6hju7fgltekq2m0k781kre9.apps.googleusercontent.com')
-      },
-    ]
-);
-return config;
-}
+export function getAuthServiceConfigs() { }
 @NgModule({
   declarations: [
     AppComponent,
@@ -132,9 +117,8 @@ return config;
     RouterModule.forRoot(appRoutes),
     NgbModule,
     AngularFontAwesomeModule,
-    SocialLoginModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, 'Trabun'), // imports firebase/app needed for everything
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     JsonpModule,
@@ -180,14 +164,12 @@ return config;
     MatCardModule,
     MatChipsModule,
     MatSnackBarModule,
+    // AngularFireDatabase,
   ],
   providers: [
     HttpClientModule,
     AuthService,
-      {
-        provide: AuthServiceConfig,
-        useFactory: getAuthServiceConfigs
-      }],
+      ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,18 +1,3 @@
-<!--ngIf desaparecerá lo que esta dentro del div-->
-<!-- <div *ngIf='authService.user | async'>
-  <p>Bienvenido : {{(authService.user | async).name}}</p>
-  <button type='button' (click)='onLogout()'>Logout</button>
-</div>
-<form [formGroup]='authForm' (ngSubmit)='onRegister()' *ngIf='!(authService.user | async)'>
-  <input type='text' formControlName='name'>
-  <input type='email' formControlName='email'>
-  <input type='password' formControlName='password'>
-  <button type='submit' [disabled]='!authForm.valid'>Registrarse</button>
-  <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form -->
-<!-- <button type='button' (click)='onLogin()' [disabled]='!authForm.valid'>Log - in</button> -->
-  <!--Ejecutará onLogin-->
-<!-- </form> -->
-<h1>
 <div class='login-div'>
   <div class='head'>
     <h1>Login</h1>
