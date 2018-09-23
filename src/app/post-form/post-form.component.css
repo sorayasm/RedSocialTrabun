@@ -1,10 +1,16 @@
 textarea {
     resize: none;
 }
-.mat-input-wrapper {
+.mat-input {
     background: gray;
 }
-p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+p {
     font-size: 12px;
 }
+
+button{
+    width: 100%;
+    background-color: green;
+    color: white;
+    margin-top: 1em;
+  }

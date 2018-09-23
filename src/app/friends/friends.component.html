@@ -1,3 +1,9 @@
 <app-navbar></app-navbar>
 <img class="header" src="../../assets/img/header.jpg" alt="">
 <h2>Mis amigos.</h2>
+
+<ul>
+    <li *ngFor="let user of users$ | async">
+       {{ user.email }}
+    </li>
+  </ul>

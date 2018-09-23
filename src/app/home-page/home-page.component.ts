@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(private firebaseAuth: AngularFireAuth, private database:AngularFireDatabase) { 
     this.posts$ = this.database.list('/post').valueChanges();
-    let user = this.firebaseAuth.auth.currentUser;
+    const user = this.firebaseAuth.auth.currentUser;
         console.log("usuario: " + user.uid)
       
   }
