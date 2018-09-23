@@ -13,12 +13,12 @@ import {MatFormFieldModule, MatFormFieldControl} from '@angular/material/form-fi
 export class PostFormComponent implements OnInit {
 
   postForm: FormGroup;
-  postList$ :AngularFireList<any>;
+  postList$: AngularFireList<any>;
 
-  constructor(private formBuilder: FormBuilder, private firebaseAuth: AngularFireAuth, private database:AngularFireDatabase, private authService: AuthService,) { 
-  this.createPostForm(); 
+  constructor(private formBuilder: FormBuilder, private firebaseAuth: AngularFireAuth,
+    private database: AngularFireDatabase, private authService: AuthService) {
+  this.createPostForm();
   this.postList$ = this.database.list('/posts');
-
   }
 
   createPostForm() {
@@ -28,16 +28,16 @@ export class PostFormComponent implements OnInit {
     });
   }
 
-  addPost() { 
-    const newpost = { //tipo inferido
+  addPost() {
+    const newpost = { // tipo inferido
       image: this.postForm.value.image,
       content: this.postForm.value.content,
       creator: this.firebaseAuth.auth.currentUser.uid
     };
 
-    this.postList$.push(newpost);//esto agrega un nuevo post
+    this.postList$.push(newpost); // esto agrega un nuevo post
     this.postForm.reset();
-}
+  }
   ngOnInit() {
   }
 

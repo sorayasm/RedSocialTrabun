@@ -2,7 +2,7 @@
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { HomePageComponent } from './home-page/home-page.component'; 
+import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
@@ -173,6 +173,7 @@ export function getAuthServiceConfigs() { }
     MatTreeModule,
     MatCardModule,
     MatChipsModule
+
   ],
   providers: [
     HttpClientModule,

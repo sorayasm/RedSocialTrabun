@@ -10,17 +10,15 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  public posts$:Observable<any[]>;
+  public posts$: Observable<any[]>;
 
-  constructor(private firebaseAuth: AngularFireAuth, private database:AngularFireDatabase) { 
+  constructor(private firebaseAuth: AngularFireAuth, private database: AngularFireDatabase) {
     this.posts$ = this.database.list('/post').valueChanges();
     const user = this.firebaseAuth.auth.currentUser;
-        console.log("usuario: " + user.uid)
-      
+        console.log('usuario: ' + user.uid);
   }
 
   ngOnInit() {
-    
   }
 
 

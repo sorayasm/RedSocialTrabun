@@ -57,8 +57,8 @@ this.authService.login(this.authForm.value.email, this.authForm.value.password)
 
   onLogout() {
   return this.authService.logout()
-
    }
+  
   ngOnInit() {
   }
 }
