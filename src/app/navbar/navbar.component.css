@@ -6,3 +6,7 @@
 #logo{
   width: 40px;
 }
+.white,
+.white mat-icon{
+  color:white;
+}

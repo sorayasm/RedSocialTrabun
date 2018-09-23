@@ -23,7 +23,6 @@ export class PostFormComponent implements OnInit {
 
   createPostForm() {
     this.postForm = this.formBuilder.group({
-      title: ['', Validators.required],
       image: ['', Validators.required],
       content: ['', Validators.required],
     });
@@ -31,7 +30,6 @@ export class PostFormComponent implements OnInit {
 
   addPost() {
     const newpost = { // tipo inferido
-      title: this.postForm.value.title,
       image: this.postForm.value.image,
       content: this.postForm.value.content,
       creator: this.firebaseAuth.auth.currentUser.uid
