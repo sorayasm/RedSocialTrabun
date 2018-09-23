@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 // Firebase
 import { AngularFireAuth } from '@angular/fire/auth';
-// import * as firebase from 'firebase/app'
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
@@ -40,6 +39,8 @@ export class AuthService {
         const newUser = { // tipo inferido
           email: email,
           uid: user.user.uid,
+          username: email, 
+          photoUrl: "https://www.pekoda.com/images/default.png",
         };
         this.userList$.push(newUser); // esto agrega un nuevo User
       })
@@ -79,3 +80,4 @@ export class AuthService {
     }
 
 }
+
