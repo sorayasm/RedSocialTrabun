@@ -4,11 +4,15 @@
 <h2>Bienvenido a Trabún, una red social de alimentación saludable.</h2>
 
 <app-post-form></app-post-form>
-<!--app-home-page *ngFor="let post of (posts$)">
-    <mat-card class="post-card">
-        <h2>{{title}}</h2>
-        <img src="{{image}}">
+<!--  <app-post-form *ngFor="let post of (posts$ | async)"
+[creator]='post.creator'
+[image]='post.image'
+[description]='post.description'
+></app-post-form> -->
+
+  <mat-card class="post-card">
+        <h2 *ngFor="let post of posts$ | async">{{users}}</h2>
+        <img src='{{image}}'>
         <p>{{content}}</p>
-    </mat-card>
-</app-home-page -->
+  </mat-card> 
 
