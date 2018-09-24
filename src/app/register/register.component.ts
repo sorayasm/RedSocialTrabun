@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 export class RegisterComponent implements OnInit {
    authForm: FormGroup;
 
-   constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
+   constructor(public formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
      this.createAuthForm();
      // hacemos una consulta a la base de datos
    }

@@ -8,11 +8,11 @@
 [creator]='post.creator'
 [image]='post.image'
 [description]='post.description'
-></app-post-form> -->
+></app-post-form> 
 
   <mat-card class="post-card">
-        <h2 *ngFor="let post of posts$ | async">{{users}}</h2>
+        <h2 *ngFor="let post of posts$ | async">{{creator}}</h2>
         <img src='{{image}}'>
         <p>{{content}}</p>
-  </mat-card> 
+  </mat-card> -->
 
