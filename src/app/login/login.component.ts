@@ -22,38 +22,33 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  // Snackbar de error
   onRegister() {
     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-        console.log('Registro exitoso!');
         this.router.navigate(['/wall']);
       })
       .catch(() => {
-        // Algo salió mal, avisemos mejor para que reintente
         this.snackBar.open('Error de registro, intenta otra vez'
-          , null // No necesitamos botón en el aviso
+          , null 
           , {
             duration: 3000
           });
         });
       }
 
-onLogin() {
-this.authService.login(this.authForm.value.email, this.authForm.value.password)
-.then(() => {
-    // Login exitoso, así que celebramos con el usuario (?)
-    this.router.navigate(['/wall']);
-  })
+  onLogin() {
+  this.authService.login(this.authForm.value.email, this.authForm.value.password)
+  .then(() => {
+      this.router.navigate(['/wall']);
+    })
   .catch(() => {
-    // Algo salió mal, avisemos mejor para que reintente
-    this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
-      , null // No necesitamos botón en el aviso
-      , {
-        duration: 3000
-      });
-  });
-  }
+      this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
+        , null 
+        , {
+          duration: 3000
+        });
+    });
+    }
 
   onLogout() {
   return this.authService.logout()
