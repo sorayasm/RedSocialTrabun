@@ -14,7 +14,8 @@ import { AngularFireList } from '@angular/fire/database';
 export class AuthService {
   private user: Observable<firebase.User>;
   private userDetails: firebase.User = null;
-  userList$: AngularFireList<any>;
+  private userList$: AngularFireList<any>;
+
   constructor(private firebaseAuth: AngularFireAuth, private database: AngularFireDatabase, private router: Router ) {
     this.user = firebaseAuth.authState;
     this.userList$ = this.database.list('/users');
@@ -22,7 +23,7 @@ export class AuthService {
     (user) => {
       if (user) {
         this.userDetails = user;
-        console.log(this.userDetails);
+        //console.log(this.userDetails);
       } else {
         this.userDetails = null;
       }

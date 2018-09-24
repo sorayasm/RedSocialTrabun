@@ -9,6 +9,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { RegisterComponent } from './register/register.component';
 import { FriendsComponent } from './friends/friends.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { ProducerComponent } from './producer/producer.component';
+import { RecipesComponent } from './recipes/recipes.component'
 
 // Funcionalidad y estilos
 import { NgModule } from '@angular/core';
@@ -101,6 +103,14 @@ const appRoutes: Routes = [
     component: FriendsComponent
   },
   {
+    path: 'recipes',
+    component: RecipesComponent
+  },
+  {
+    path: 'producer',
+    component: ProducerComponent
+  },
+  {
     path: "not-found-page", 
     component: NotFoundPageComponent
   }
@@ -120,6 +130,8 @@ export function getAuthServiceConfigs() { }
     RegisterComponent,
     FriendsComponent,
     PostFormComponent,
+    ProducerComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
