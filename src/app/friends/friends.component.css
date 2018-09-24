@@ -1,0 +1,14 @@
+li {
+ list-style-type: none;
+ list-style-position: initial;
+ padding: 20px 15px 25px 15px;
+ background-color: #f0f0f0;
+ margin: 10px 0px 10px -30px;
+}
+
+li img {
+    float: right;
+}
+.profilepic {
+    width: 30px;
+}

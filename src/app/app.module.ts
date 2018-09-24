@@ -8,10 +8,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { RegisterComponent } from './register/register.component';
 import { FriendsComponent } from './friends/friends.component';
-import { ProducerComponent } from './producer/producer.component';
-import { RecipesComponent } from './recipes/recipes.component';
 import { PostFormComponent } from './post-form/post-form.component';
-import { ProfileWallComponent } from './profile-wall/profile-wall.component';
 
 // Funcionalidad y estilos
 import { NgModule } from '@angular/core';
@@ -104,15 +101,7 @@ const appRoutes: Routes = [
     component: FriendsComponent
   },
   {
-    path: 'producer',
-    component: ProducerComponent
-  },
-  {
-    path: 'recipes',
-    component: RecipesComponent
-  },
-  {
-    path: 'not-found-page',
+    path: "not-found-page", 
     component: NotFoundPageComponent
   }
 ];
@@ -130,10 +119,7 @@ export function getAuthServiceConfigs() { }
     NotFoundPageComponent,
     RegisterComponent,
     FriendsComponent,
-    ProducerComponent,
-    RecipesComponent,
     PostFormComponent,
-    ProfileWallComponent
   ],
   imports: [
     BrowserModule,
@@ -186,7 +172,8 @@ export function getAuthServiceConfigs() { }
     MatTooltipModule,
     MatTreeModule,
     MatCardModule,
-    MatChipsModule,
+    MatChipsModule
+
   ],
   providers: [
     HttpClientModule,
