@@ -1,0 +1,8 @@
+.example-card {
+    max-width: 300px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.pekoda.com/images/default.png');
+    background-size: cover;
+  }
