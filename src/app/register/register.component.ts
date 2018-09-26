@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {Router} from '@angular/router';
+import { Router} from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-register',
@@ -12,9 +13,14 @@ import {Router} from '@angular/router';
 export class RegisterComponent implements OnInit {
    authForm: FormGroup;
 
-   constructor(public formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
-     this.createAuthForm();
-     // hacemos una consulta a la base de datos
+   constructor(public formBuilder: FormBuilder,
+    public authService: AuthService,
+    public snackBar: MatSnackBar,
+    public router: Router,
+    public firebaseAuth: AngularFireAuth) {
+    const user = this.firebaseAuth.auth.currentUser;
+    console.log(user);
+    this.createAuthForm();
    }
 
    ngOnInit() {

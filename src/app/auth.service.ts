@@ -16,13 +16,11 @@ export class AuthService {
   public userDetails: firebase.User = null;
   userList$: AngularFireList<any>;
   constructor(public firebaseAuth: AngularFireAuth, public database: AngularFireDatabase, public router: Router ) {
-    this.user = firebaseAuth.authState;
     this.userList$ = this.database.list('/users');
-  this.user.subscribe(
+    this.user.subscribe(
     (user) => {
       if (user) {
         this.userDetails = user;
-        console.log(this.userDetails);
       } else {
         this.userDetails = null;
       }
