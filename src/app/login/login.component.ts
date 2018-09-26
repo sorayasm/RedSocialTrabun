@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router} from '@angular/router';
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,11 @@ import { Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
  authForm: FormGroup;
+<<<<<<< HEAD
  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
+=======
+ constructor(public formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
+>>>>>>> upstream/master
   this.createLoginForm();
 }
 
@@ -29,7 +34,7 @@ export class LoginComponent implements OnInit {
       })
       .catch(() => {
         this.snackBar.open('Error de registro, intenta otra vez'
-          , null 
+          , null
           , {
             duration: 3000
           });
@@ -43,7 +48,7 @@ export class LoginComponent implements OnInit {
     })
   .catch(() => {
       this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
-        , null 
+        , null
         , {
           duration: 3000
         });
@@ -51,9 +56,9 @@ export class LoginComponent implements OnInit {
     }
 
   onLogout() {
-  return this.authService.logout()
+  return this.authService.logout();
    }
-  
+
   ngOnInit() {
   }
 }
