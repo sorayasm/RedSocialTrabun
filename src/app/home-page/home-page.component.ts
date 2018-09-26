@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
-
 
 @Component({
   selector: 'app-home-page',
@@ -10,6 +8,18 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  posts$: Observable<any>;
+
+  constructor(private database: AngularFireDatabase) {
+    this.posts$ = this.database.list('/posts').valueChanges();
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+ /*
  // public posts$: Observable<any[]>;
   public image$: AngularFireList<any[]>;
   public content$: AngularFireList<any[]>;
@@ -32,8 +42,6 @@ export class HomePageComponent implements OnInit {
 
   // const creatorList = db.list<posts>('creator');
 
-  }
-
   /*getPost() {
     const getPost = {
       image: this.database.list('/image').valueChanges(),
@@ -42,9 +50,3 @@ export class HomePageComponent implements OnInit {
     };
     this.showPost$.push(getPost);
   }*/
-
-
-  ngOnInit() {
-  }
-
-}

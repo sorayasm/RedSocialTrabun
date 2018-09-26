@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { PostsService } from '../posts.service';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-perfil',
@@ -7,10 +8,14 @@ import { PostsService } from '../posts.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+posts$: Observable<any>;
 
-  constructor(public postService: PostsService) {  }
-  ngOnInit() {
-  }
+constructor(private database: AngularFireDatabase) {
+  this.posts$ = this.database.list('/posts').valueChanges();
+}
+
+ngOnInit() {
+}
 
 }
 
