@@ -13,7 +13,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class RegisterComponent implements OnInit {
    authForm: FormGroup;
 
-   constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router, public firebaseAuth: AngularFireAuth) {
+   constructor(public formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router, public firebaseAuth: AngularFireAuth) {
     const user = this.firebaseAuth.auth.currentUser;
     console.log(user);
     this.createAuthForm();
@@ -46,6 +46,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onLogout() {
-   return this.authService.logout()
+   return this.authService.logout();
   }
 }

@@ -23,9 +23,9 @@ export class WelcomeComponent implements OnInit {
 @Injectable()
 export class AppComponent {
 
-  constructor(private firebaseAuth: AngularFireAuth, private router: Router, private authService: AuthService) { }
+  constructor(public firebaseAuth: AngularFireAuth, public router: Router, public authService: AuthService) { }
 
-  signInWithFacebook() {
+ /* signInWithFacebook() {
     this.authService.signInWithFacebook()
     .then((res) => {
         this.router.navigate(['wall']);
@@ -39,6 +39,6 @@ export class AppComponent {
         this.router.navigate(['wall']);
       })
     .catch((err) => console.log(err));
-  }
+  }*/
 
 }

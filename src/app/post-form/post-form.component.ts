@@ -14,11 +14,13 @@ export class PostFormComponent implements OnInit {
 
   postForm: FormGroup;
   postList$: AngularFireList<any>;
+  showPost$: AngularFireList<any>;
 
   constructor(private formBuilder: FormBuilder, private firebaseAuth: AngularFireAuth,
     private database: AngularFireDatabase, private authService: AuthService) {
   this.createPostForm();
   this.postList$ = this.database.list('/posts');
+  this.showPost$ = this.database.list('posts');
   }
 
   createPostForm() {
@@ -38,6 +40,7 @@ export class PostFormComponent implements OnInit {
     this.postList$.push(newpost); // esto agrega un nuevo post
     this.postForm.reset();
   }
+
   ngOnInit() {
   }
 
