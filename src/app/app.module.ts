@@ -103,7 +103,6 @@ const appRoutes: Routes = [
     component: FriendsComponent
   },
   {
-<<<<<<< HEAD
     path: 'recipes',
     component: RecipesComponent
   },
@@ -112,8 +111,6 @@ const appRoutes: Routes = [
     component: RestaurantsComponent
   },
   {
-=======
->>>>>>> upstream/master
     path: 'not-found-page',
     component: NotFoundPageComponent
   }
