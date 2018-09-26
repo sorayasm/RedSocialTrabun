@@ -1,15 +1,19 @@
-<form [formGroup]="postForm" (ngSubmit)="addPost()">
-  <p>Te invitamos a dejar un post en nuestra comunidad:</p> 
-  <mat-form-field>
-    <input matInput #image type="text" formControlName="image" placeholder="Url de Imagen">
-    <p *ngIf="postForm.get('image').errors && postForm.get('image').errors.required && (postForm.get('image').dirty || postForm.get('image').touched)" style="color:red;">Agrega una url de una imagen para tu post</p>
-  </mat-form-field>
-  <mat-form-field>
-    <textarea  matInput #description type="text" formControlName="content" placeholder="Contenido"></textarea>
-    <p *ngIf="postForm.get('content').errors && postForm.get('content').errors.required && (postForm.get('content').dirty || postForm.get('content').touched)"
-    style="color:red;">Incluye contenido para tu post</p>
-  </mat-form-field>
-  <button mat-button type="submit" [disabled]="!postForm.valid">
-    ¡Agrega tu post!
-  </button>
-</form>
+<div class="container">
+  <form [formGroup]="postForm" (ngSubmit)="addPost()">
+    <p>Te invitamos a dejar un post en nuestra comunidad:</p>
+    <mat-form-field>
+      <input matInput #image type="text" formControlName="image" placeholder="Url de Imagen">
+      <p *ngIf="postForm.get('image').errors && postForm.get('image').errors.required && (postForm.get('image').dirty || postForm.get('image').touched)" style="color:red;">Agrega una url de una imagen para tu post</p>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+      <textarea  matInput #description type="text" formControlName="content" placeholder="Contenido"></textarea>
+      <p *ngIf="postForm.get('content').errors && postForm.get('content').errors.required && (postForm.get('content').dirty || postForm.get('content').touched)"
+      style="color:red;">Incluye contenido para tu post</p>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <button mat-button type="submit" [disabled]="!postForm.valid">
+      ¡Agrega tu post!
+    </button>
+  </form>
+</div>
