@@ -12,20 +12,19 @@ import { AngularFireList } from '@angular/fire/database';
 })
 
 export class AuthService {
-  private user: Observable<firebase.User>;
-  private userDetails: firebase.User = null;
-  private userList$: AngularFireList<any>;
+  public user$: Observable<firebase.User>;
+  public userDetails$: firebase.User = null;
+  public userList$: AngularFireList<any>;
 
-  constructor(private firebaseAuth: AngularFireAuth, private database: AngularFireDatabase, private router: Router ) {
-    this.user = firebaseAuth.authState;
+  constructor(public firebaseAuth: AngularFireAuth, public database: AngularFireDatabase, public router: Router ) {
+    this.user$ = firebaseAuth.authState;
     this.userList$ = this.database.list('/users');
-  this.user.subscribe(
+    this.user$.subscribe(
     (user) => {
       if (user) {
-        this.userDetails = user;
-        //console.log(this.userDetails);
+        this.userDetails$ = user;
       } else {
-        this.userDetails = null;
+        this.userDetails$ = null;
       }
     }
   );
@@ -69,13 +68,12 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    if (this.userDetails == null ) {
+    if (this.userDetails$ == null ) {
         return false;
       } else {
         return true;
       }
     }
-    
 
   logout() {
   return this.firebaseAuth.auth.signOut()
