@@ -18,18 +18,19 @@ export class HomePageComponent implements OnInit {
 
 
 
-  constructor(public firebaseAuth: AngularFireAuth, public database: AngularFireDatabase) {
+  constructor(public firebaseAuth: AngularFireAuth, public db: AngularFireDatabase) {
     // this.posts$ = database.list('/posts').valueChanges();
    /* this.image$ = database.list('/posts').valueChanges();
     this.content$ = database.list('/posts').valueChanges();
-    this.users$ = database.list('/users').valueChanges();*/
-
+    this.users$ = database.list('/users').valueChanges();
    const user = this.firebaseAuth.auth.currentUser;
         console.log('usuario: ' + user.uid);
-   const image = this.database.list('/image');
+   const image = this.db.list('/image');
       console.log('image:' + image);
-   const content = this.database.list('/content');
-   console.log('content:' + content);
+   const content = this.db.list('/content');
+   console.log('content:' + content);*/
+
+  // const creatorList = db.list<posts>('creator');
 
   }
 
