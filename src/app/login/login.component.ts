@@ -12,7 +12,6 @@ import { state } from '@angular/animations';
 })
 export class LoginComponent implements OnInit {
  authForm: FormGroup;
-
  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
   this.createLoginForm();
 }

@@ -1,9 +1,3 @@
-textarea {
-    resize: none;
-}
-.mat-input {
-    background: gray;
-}
 p {
     font-size: 12px;
 }
@@ -14,3 +8,7 @@ button{
     color: white;
     margin-top: 1em;
   }
+
+.mat-form-field{
+    width: 100%;
+}
