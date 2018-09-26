@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
   public image$: AngularFireList<any[]>;
   public content$: AngularFireList<any[]>;
   public users$: AngularFireList<any[]>;
-  public showPost$: AngularFireList<any>;
+  public creator$: AngularFireList<any>;
 
 
 
@@ -30,7 +30,6 @@ export class HomePageComponent implements OnInit {
    const content = this.db.list('/content');
    console.log('content:' + content);*/
 
-  // const creatorList = db.list<posts>('creator');
 
   }
 
