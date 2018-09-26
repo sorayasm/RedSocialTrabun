@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,13 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'RedSocial Trabun';
+  posts: Observable<any[]>;
  name: string;
  email: string;
  password: string;
-  constructor(private http: Http, public authService: AuthService, route: ActivatedRoute) {
+  constructor( db: AngularFireDatabase, private http: Http, public authService: AuthService, route: ActivatedRoute) {
+    this.posts = db.list('posts').valueChanges();
+    const relative = db.object('posts').valueChanges();
     const url: Observable<string> = route.url.pipe(map(segments => segments.join('')));
   }
 

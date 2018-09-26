@@ -18,9 +18,15 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
   }
 
+<<<<<<< HEAD
 constructor(public firebaseAuth: AngularFireAuth, public router: Router, public authService: AuthService) { }
 
  signInWithFacebook() {
+=======
+  constructor(public firebaseAuth: AngularFireAuth, public router: Router, public authService: AuthService) { }
+
+  signInWithFacebook() {
+>>>>>>> upstream/master
     this.authService.signInWithFacebook()
     .then((res) => {
         this.router.navigate(['wall']);

@@ -13,12 +13,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class RegisterComponent implements OnInit {
    authForm: FormGroup;
 
-   constructor(
-     public formBuilder: FormBuilder,
-     public authService: AuthService,
-     public snackBar: MatSnackBar,
-     public router: Router,
-     public firebaseAuth: AngularFireAuth) {
+   constructor(public formBuilder: FormBuilder,
+    public authService: AuthService,
+    public snackBar: MatSnackBar,
+    public router: Router,
+    public firebaseAuth: AngularFireAuth) {
     const user = this.firebaseAuth.auth.currentUser;
     console.log(user);
     this.createAuthForm();
