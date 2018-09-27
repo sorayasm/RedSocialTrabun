@@ -4,18 +4,18 @@
 <h2>Bienvenido a Trabún, una red social de alimentación saludable.</h2>
 
 <app-post-form></app-post-form>
-<div *ngFor="let post of posts$ | async">
-      <mat-card class="example-card">
-      <mat-card-header>
-          <div mat-card-avatar class="example-header-image">
-              <mat-card-title>{{post.creator}}</mat-card-title>
-              <img mat-card-image src="" alt="">
-          </div>
-      </mat-card-header>
-      <mat-card-content>
-          <img mat-card-image src="{{post.image}}" alt="">
-          <p>{{post.content}}</p>
-      </mat-card-content>
+<div *ngFor="let post of posts$ | async" class="wall">
+      <mat-card class="card">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image">
+                <mat-card-title>{{post.creator}}</mat-card-title>
+                <img mat-card-image src="" alt="">
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <img mat-card-image src="{{post.image}}" alt="">
+            <p>{{post.content}}</p>
+        </mat-card-content>
       </mat-card>
   </div>
 

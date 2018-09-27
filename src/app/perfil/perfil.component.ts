@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,14 +9,25 @@ import { Observable } from 'rxjs';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-posts$: Observable<any>;
+public posts$: Observable<any>;
+public users$: Observable<any>;
+public user: Observable<firebase.User>;
 
-constructor(private database: AngularFireDatabase) {
+constructor(public database: AngularFireDatabase, public firebaseAuth: AngularFireAuth) {
   this.posts$ = this.database.list('/posts').valueChanges();
+  this.users$ = this.database.list('/users').valueChanges();
+  this.filter();
+}
+
+public filter() {
+const user = this.firebaseAuth.auth.currentUser;
+const myUser = user.uid;
+  console.log('usuario: ' + myUser);
+
 }
 
 ngOnInit() {
-}
 
 }
 
+}

@@ -17,3 +17,21 @@ h2 {
 md-icon{
   font-family: 'Material Icons' !important;
 }
+
+/* Muros */
+
+.card {
+  max-width: 300px;
+  margin: 2em;
+  float: left;
+}
+
+.header-image {
+  background-image: url('https://www.pekoda.com/images/default.png');
+  background-size: cover;
+  margin-bottom: 2.5em;
+}
+
+.header-image mat-card-title {
+  padding-left: 50px;
+  }
