@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
     public router: Router,
     public firebaseAuth: AngularFireAuth) {
     const user = this.firebaseAuth.auth.currentUser;
-    console.log(user);
+    // console.log(user);
     this.createAuthForm();
    }
 

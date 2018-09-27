@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { AuthService } from '../auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
-import {MatFormFieldModule, MatFormFieldControl} from '@angular/material/form-field';
 
 @Component({
   selector: 'app-post-form',
@@ -11,16 +9,13 @@ import {MatFormFieldModule, MatFormFieldControl} from '@angular/material/form-fi
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-
   postForm: FormGroup;
   postList$: AngularFireList<any>;
-  showPost$: AngularFireList<any>;
 
   constructor(private formBuilder: FormBuilder, private firebaseAuth: AngularFireAuth,
-    private database: AngularFireDatabase, private authService: AuthService) {
+    private database: AngularFireDatabase) {
   this.createPostForm();
   this.postList$ = this.database.list('/posts');
-  this.showPost$ = this.database.list('posts');
   }
 
   createPostForm() {
@@ -34,7 +29,8 @@ export class PostFormComponent implements OnInit {
     const newpost = { // tipo inferido
       image: this.postForm.value.image,
       content: this.postForm.value.content,
-      creator: this.firebaseAuth.auth.currentUser.uid
+      creator: this.firebaseAuth.auth.currentUser.uid,
+      creatorName: this.firebaseAuth.auth.currentUser.displayName,
     };
 
     this.postList$.push(newpost); // esto agrega un nuevo post

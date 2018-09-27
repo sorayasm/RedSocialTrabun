@@ -36,13 +36,13 @@ export class AuthService {
       .createUserWithEmailAndPassword(email, password)
       .then(user => {
         console.log('Success!', user);
-        const newUser = { // tipo inferido
+        const newUser = {
           email: email,
           uid: user.user.uid,
           username: email,
           photoUrl: 'https://www.pekoda.com/images/default.png',
         };
-        this.userList$.push(newUser); // esto agrega un nuevo User
+        this.userList$.push(newUser);
       })
       .catch(err => {
         console.log('Something went wrong:', err.message); // dar mensaje de error al usuario

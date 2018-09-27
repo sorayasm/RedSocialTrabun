@@ -9,7 +9,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { RegisterComponent } from './register/register.component';
 import { FriendsComponent } from './friends/friends.component';
 import { PostFormComponent } from './post-form/post-form.component';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { YogaComponent } from './yoga/yoga.component';
 import { RecipesComponent } from './recipes/recipes.component';
 
 // Funcionalidad y estilos
@@ -107,8 +107,8 @@ const appRoutes: Routes = [
     component: RecipesComponent
   },
   {
-    path: 'restaurant',
-    component: RestaurantsComponent
+    path: 'yoga',
+    component: YogaComponent
   },
   {
     path: 'not-found-page',
@@ -130,7 +130,7 @@ export function getAuthServiceConfigs() { }
     RegisterComponent,
     FriendsComponent,
     PostFormComponent,
-    RestaurantsComponent,
+    YogaComponent,
     RecipesComponent
   ],
   imports: [

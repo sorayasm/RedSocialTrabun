@@ -8,7 +8,7 @@
       <mat-card class="card">
         <mat-card-header>
             <div mat-card-avatar class="header-image">
-                <mat-card-title>{{post.creator}}</mat-card-title>
+                <mat-card-title>{{post.creator.username}}</mat-card-title>
                 <img mat-card-image src="" alt="">
             </div>
         </mat-card-header>
@@ -19,15 +19,5 @@
       </mat-card>
   </div>
 
-<!--  <app-post-form *ngFor="let post of (posts$ | async)"
-[creator]='post.creator'
-[image]='post.image'
-[description]='post.description'
-></app-post-form> 
 
-  <mat-card class="post-card">
-        <h2 *ngFor="let post of posts$ | async">{{creator}}</h2>
-        <img src='{{image}}'>
-        <p>{{content}}</p>
-  </mat-card> -->
 
