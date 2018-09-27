@@ -12,13 +12,19 @@
               <img mat-card-image src="" alt="">
           </div>
       </mat-card-header>
-      <mat-card-content>
+      <mat-card-content >
           <img mat-card-image src="{{post.image}}" alt="">
           <p>{{post.content}}</p>
+
+          <div class="create delete button">
+         <button type="button"  (click)="deletePost('posts.creator')">Borrar Post</button>
+        <!-- <button (click)="editPost(post.key, post.value)">Editar</button> -->
+        </div>
+
+          
       </mat-card-content>
       </mat-card>
   </div>
-
 <!--  <app-post-form *ngFor="let post of (posts$ | async)"
 [creator]='post.creator'
 [image]='post.image'

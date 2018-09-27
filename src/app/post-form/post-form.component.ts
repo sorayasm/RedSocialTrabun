@@ -4,6 +4,8 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AuthService } from '../auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
+import { HomePageComponent } from '../home-page/home-page.component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-post-form',
@@ -15,6 +17,7 @@ export class PostFormComponent implements OnInit {
   postForm: FormGroup;
   postList$: AngularFireList<any>;
   showPost$: AngularFireList<any>;
+  // deletePost: HomePageComponent<any>
 
   constructor(private formBuilder: FormBuilder, private firebaseAuth: AngularFireAuth,
     private database: AngularFireDatabase, private authService: AuthService) {
@@ -36,9 +39,11 @@ export class PostFormComponent implements OnInit {
       content: this.postForm.value.content,
       creator: this.firebaseAuth.auth.currentUser.uid
     };
-
+  const newKeyPost = this.postList$.push(newpost).key;
     this.postList$.push(newpost); // esto agrega un nuevo post
     this.postForm.reset();
+
+    // deletePost(newKeyPost);
   }
 
   ngOnInit() {
