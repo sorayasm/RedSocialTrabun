@@ -13,7 +13,7 @@ public recipes$: any;
 
    public postRecipes() {
     // tslint:disable-next-line:max-line-length
-    this.http.get('http://opendata.euskadi.eus/contenidos/ds_recursos_turisticos/platos_tipicos_euskadi/opendata/gastronomia.geojson')
+    this.http.get('..\assets\data\recipes-data.json')
     .subscribe(resp => {
       this.recipes$ = resp,
       console.log(this.recipes$);

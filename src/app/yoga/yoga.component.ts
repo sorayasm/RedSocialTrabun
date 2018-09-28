@@ -8,7 +8,7 @@ import { YogaService } from '../yoga.service';
 })
 export class YogaComponent implements OnInit {
 
-  constructor(public yoga: YogaService ) { }
+  constructor(public yogaService: YogaService ) { }
 
   ngOnInit() {
   }

@@ -2,12 +2,15 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Open Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
 }
 
 h2 {
     color: green;
     font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
   }
 .header{
     width: 100%;
