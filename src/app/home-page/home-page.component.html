@@ -15,6 +15,10 @@
         <mat-card-content>
             <img mat-card-image src="{{post.image}}" alt="">
             <p>{{post.content}}</p>
+        <!--div>
+            <button (click)="deletePost(post.$key)">Delete</button>
+        </div-->
+        <i class="material-icons">favorite</i><i class="material-icons">delete</i><i class="material-icons">create</i>
         </mat-card-content>
       </mat-card>
   </div>

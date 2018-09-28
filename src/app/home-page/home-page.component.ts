@@ -12,15 +12,18 @@ import { FirebaseDatabase } from '@angular/fire';
 })
 export class HomePageComponent implements OnInit {
   posts$: Observable<any>;
+  postList$: AngularFireList<any[]>;
+
 
   constructor(public database: AngularFireDatabase) {
     this.posts$ = this.database.list('/posts').valueChanges();
-
+   // this.postList$ = this.database.list('/posts').update;
   }
 
 deletePost() {
+ // const newKeyPost = this.postList$.(this.posts$).key;
   const post = this.database.list('/posts');
-  post.remove('key');
+  post.remove('posts');
 }
 
 editPost() {
