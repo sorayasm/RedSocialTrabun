@@ -23,16 +23,16 @@ export class AppComponent {
  email: string;
  password: string;
   constructor(public db: AngularFireDatabase, public http: Http, public authService: AuthService, public route: ActivatedRoute) {
-    const url: Observable<string> = route.url.pipe(map(segments => segments.join('')));
+    // const url: Observable<string> = route.url.pipe(map(segments => segments.join('')));
 
-    this.posts = db.list('/posts');
-    this.creator = this.posts.snapshotChanges().pipe(
+   /*  this.posts = db.list('/posts');
+   this.creator = this.posts.snapshotChanges().pipe(
       map(changes =>
         changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
       )
-    );
+    );*/
   }
-  addItem(newName: string) {
+ /* addItem(newName: string) {
     this.posts.push({ text: newName });
   }
   updateItem(key: string, newText: string) {
@@ -45,7 +45,7 @@ export class AppComponent {
     this.posts.remove();
   }
 
-
+*/
 
   signup() {
     this.authService.signup(this.email, this.password);

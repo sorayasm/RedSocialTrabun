@@ -19,12 +19,13 @@ h2 {
 
 md-icon{
   font-family: 'Material Icons' !important;
+  color: rgb(49, 49, 49);
 }
 
 /* Muros */
 
 .card {
-  max-width: 300px;
+  max-width: 220px;
   margin: 2em;
   float: left;
 }
@@ -32,12 +33,17 @@ md-icon{
 .header-image {
   background-image: url('https://www.pekoda.com/images/default.png');
   background-size: cover;
-  margin-bottom: 2.5em;
+  margin-bottom: 7em;
+  text-align: center;
 }
 
-.header-image mat-card-title {
-  padding-top: 50px;
-  font-size: 12px;
+.header-image p {
+  padding-top: 2em;
+  font-size: 14px;
+  font-weight: 700;
   }
 
-  
+.mat-card-image:first-child {
+    margin-top: 0px;
+}
+
