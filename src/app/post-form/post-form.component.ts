@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+<<<<<<< HEAD
+=======
+import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
+import { HomePageComponent } from '../home-page/home-page.component';
+import { Observable } from 'rxjs';
+>>>>>>> de0bda5475273bddf404ff66bd560ec0686f5b7a
 
 @Component({
   selector: 'app-post-form',
@@ -30,11 +36,13 @@ export class PostFormComponent implements OnInit {
       image: this.postForm.value.image,
       content: this.postForm.value.content,
       creator: this.firebaseAuth.auth.currentUser.uid,
-      creatorName: this.firebaseAuth.auth.currentUser.displayName,
+      creatorName: this.firebaseAuth.auth.currentUser.email,
     };
-
+  // const newKeyPost = this.postList$.push(newpost).key;
     this.postList$.push(newpost); // esto agrega un nuevo post
     this.postForm.reset();
+
+    // deletePost(newKeyPost);
   }
 
   ngOnInit() {
