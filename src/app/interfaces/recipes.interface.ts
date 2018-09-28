@@ -1,17 +1,17 @@
-interface RootObject {
+export interface RootObject {
     type: string;
     name: string;
     features: Feature[];
   }
 
-  interface Feature {
+export  interface Feature {
     id: number;
     type: string;
     geometry: Geometry;
     properties: Properties;
   }
 
-  interface Properties {
+export interface Properties {
     documentname: string;
     turismdescription: string;
     templatetype: string;
@@ -31,7 +31,7 @@ interface RootObject {
     zipfile: string;
   }
 
-  interface Geometry {
+export interface Geometry {
     type: string;
     coordinates: number[];
   }
