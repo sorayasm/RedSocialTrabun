@@ -1,4 +1,4 @@
-jsonCallback({
+[{
     "type" : "FeatureCollection",
     "name" : "Platos tÃ­picos de Euskadi",
     "features" : [ {
@@ -396,4 +396,5 @@ jsonCallback({
         "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002969_j1_rec_turismo/opendata/0000002969_j1_rec_turismo.zip"
       }
     } ]
-  });
+  }]
+  
