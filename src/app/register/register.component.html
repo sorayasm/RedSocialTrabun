@@ -6,7 +6,7 @@
     <div class='banner'>
       <img src='../../assets/img/newuser.png' class='img-fluid' alt='' srcset=''>
     </div> 
-<form [formGroup]='authForm' *ngIf="!(authService.user | async)" (ngSubmit)='onRegister()'>
+<form [formGroup]='authForm' *ngIf="!(authService.user$ | async)" (ngSubmit)='onRegister()'>
   <p>Ingresa un correo: </p>
   <input type='email' formControlName='email'><br> 
   <p>Ingresa una contraseña: </p>
@@ -14,7 +14,7 @@
   <button mat-button type='submit'>Registrarse</button> <br>
   <button mat-button routerLink='/login'>Ir a Login</button>
   </form>
-  <div class="logged" *ngIf="(authService.user | async)">
+  <div class="logged" *ngIf="(authService.user$ | async)">
     <p>Ya ingresaste.</p>
     <p> Por favor elige una opción:</p>
     <button mat-button routerLink="/wall">Ir al muro</button>

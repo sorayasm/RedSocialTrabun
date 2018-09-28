@@ -5,7 +5,7 @@
   <div class='banner'>
     <img src='../../assets/img/newuser.png' alt='' srcset=''>
   </div> 
-  <form [formGroup]='authForm' *ngIf='!(authService.user | async)'>
+  <form [formGroup]='authForm' *ngIf='!(authService.user$ | async)'>
     <p>Ingresa tu usuario:</p>
     <input type='email' formControlName='email'><br>
     <p>Ingresa tu contraseña:</p>
@@ -13,7 +13,7 @@
     <button mat-button type='button' (click)='onLogin()' [disabled]='!authForm.valid'>Ingresar</button><br>
     <button mat-button routerLink='/register'>Ir a Registro</button>
   </form>
-  <div class="logged" *ngIf='authService.user | async'>
+  <div class="logged" *ngIf='authService.user$ | async'>
     <p>Ya ingresaste.</p>
     <p> Por favor elige una opción:</p>
     <button mat-button routerLink='/wall'>Ir al muro</button>
