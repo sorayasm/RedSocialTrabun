@@ -22,7 +22,7 @@ export class AppComponent {
  name: string;
  email: string;
  password: string;
-  constructor( db: AngularFireDatabase, private http: Http, public authService: AuthService, route: ActivatedRoute) {
+  constructor(public db: AngularFireDatabase, public http: Http, public authService: AuthService, public route: ActivatedRoute) {
     const url: Observable<string> = route.url.pipe(map(segments => segments.join('')));
 
     this.posts = db.list('/posts');

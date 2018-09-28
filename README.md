@@ -1,27 +1,17 @@
-# RedSocialTrabun
+#Red Social Trabún
+En el siguiente proyecto, nos dimos a la tarea de realizar una red social con temática de alimentación consciente, autosustentable y organica. Para ello, realizamos un benchmark de las principales redes sociales de las cuales nos inspiramos para llevar a cabo nuestro proyecto, y así poder tener una idéa más clara de lo queríamos lograr. También realizamos una encuesta con la que que obtuvimos información cuantitativa y pudimos saber de forma general, los intereses de las personas por una alimentación más consciente y saludable. Esto nos llevo a poder hacer una entrevista más personalizada y poder obtener datos más cualitativos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+En el siguiente link adjuntamos entrevista de audio y graficos con encuesta realizada: https://drive.google.com/open?id=1i61SE1Qx7rqjbJuJqLJ1h6HrWiFJHJdfON1rPWwJaZM
 
-## Development server
+También realizamos un Trello con la organización de nuestro proyecto en el cual agregamos información visual del benchmark y del prototipo de alta fidelidad: https://trello.com/b/hEuPyJNp/proyecto-3-red-social
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Nombre: Trabún
+De origen mapudungún significa el encuentro entre los pueblos.
 
-## Code scaffolding
+Slogan: Conectate y Vuelve a Conectarte ( significado,conectate a la red y vuelve a conectarte (a la tierra ) )
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Con el avance de la tecnología hemos ido dejando de lado nuestra conección natural con la tierra, la gran esfera con el ecosistema perfecto que nos regala el oxigeno que respiramos cada día, la misma que junto a el sol, logran darnos alimentos nutritivos que han evolucionado junto a nosotr@s y nuestras necesidades, necesidades de las cuales no somos conscientes ya que de a poco nos hemos ido desconectando de nuestra naturaleza.
 
-## Build
+Es por esto que te invitamos a unirte a esta nueva red de pensamiento respetuoso y consciente en la cual puedes conocer a gente maravillosa que cultiva la tierra, gente que cocina y comparte sus recetas, gente que busca alimentarse de manera saludable, gente que tiene la necesidad de una conexión a través de una de las cosas más básicas para la existencia del ser humano, la alimentación.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Bienvenido, Bem vindo, Welcome, Willkommen, Benvenuto, Yōkoso, Bienvenue.
