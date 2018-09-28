@@ -1,17 +1,13 @@
 <app-navbar></app-navbar>
 <img class="header" src="../../assets/img/header.jpg" alt="">
 <h2>Recetario.</h2>
-<!-- div *ngFor="let recipe of recipes$ | async" class="wall">
+<div *ngFor="let food of recipesService.info">
     <mat-card class="card">
-      <mat-card-header>
-          <div mat-card-avatar class="header-image">
-              <mat-card-title>{{recipes.name}}</mat-card-title>
-              <img mat-card-image src="" alt="">
-          </div>
-      </mat-card-header>
       <mat-card-content>
-          <img mat-card-image src="{{post.image}}" alt="">
-          <p>{{recipes.ingredients}}</p>
+          <img mat-card-image src="{{food.img}}" alt="">
+          <h4>Nombre de la receta: {{food.documentname}}</h4>
+          <p>Preparación: {{food.turismdescription}}</p>
+          <p>Tipo de Preparación: {{food.gastronomytype}}</p>
       </mat-card-content>
     </mat-card>
-</div -->
+</div>

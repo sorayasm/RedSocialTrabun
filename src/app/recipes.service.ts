@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Feature } from './interfaces/recipes.interface';
+import { Properties } from './interfaces/recipes.interface';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class RecipesService {
-public recipes: Feature;
+public info: Properties;
 
   constructor(public http: HttpClient) {
     this.postRecipes();
@@ -14,9 +15,9 @@ public recipes: Feature;
 
    public postRecipes() {
     this.http.get('../../assets/data/recipes-data.json')
-    .subscribe((resp: Feature) => {
-      this.recipes = resp,
-      console.log(this.recipes);
+    .subscribe((resp: Properties) => {
+      this.info = resp;
+      // console.log(this.info);
     });
   }
 }

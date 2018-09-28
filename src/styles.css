@@ -36,5 +36,8 @@ md-icon{
 }
 
 .header-image mat-card-title {
-  padding-left: 50px;
+  padding-top: 50px;
+  font-size: 12px;
   }
+
+  

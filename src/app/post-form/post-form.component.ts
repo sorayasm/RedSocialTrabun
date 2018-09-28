@@ -32,8 +32,7 @@ export class PostFormComponent implements OnInit {
     const newpost = { // tipo inferido
       image: this.postForm.value.image,
       content: this.postForm.value.content,
-      creator: this.firebaseAuth.auth.currentUser.uid,
-      creatorName: this.firebaseAuth.auth.currentUser.email,
+      creator: this.firebaseAuth.auth.currentUser.email,
     };
   // const newKeyPost = this.postList$.push(newpost).key;
     this.postList$.push(newpost); // esto agrega un nuevo post

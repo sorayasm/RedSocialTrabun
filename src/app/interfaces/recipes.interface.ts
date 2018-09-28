@@ -1,16 +1,3 @@
-export interface RootObject {
-    type: string;
-    name: string;
-    features: Feature[];
-  }
-
-export  interface Feature {
-    id: number;
-    type: string;
-    geometry: Geometry;
-    properties: Properties;
-  }
-
 export interface Properties {
     documentname: string;
     turismdescription: string;
@@ -29,9 +16,5 @@ export interface Properties {
     dataxml: string;
     metadataxml: string;
     zipfile: string;
-  }
-
-export interface Geometry {
-    type: string;
-    coordinates: number[];
+    img?: string;
   }

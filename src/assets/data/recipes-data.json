@@ -1,16 +1,6 @@
 [{
-    "type" : "FeatureCollection",
-    "name" : "Platos tí­picos de Euskadi",
-    "features" : [ {
-      "id" : 1,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.073914, 43.136978 ]
-      },
-      "properties" : {
         "documentname" : "Alubias con sacramentos",
-        "turismdescription" : "Poner las alubias en remojo el dí­a anterior. Cocer la costilla y el tocino con agua y una pizca de sal durante 30 minutos en la olla a presií³n.<br/><br/>Escurrir y reservar. Aparte, se pone a cocer la morcilla y el chorizo en una cazuela con agua y una pizca de sal durante 40 minutos y a fuego suave. <br/><br/>Picar la cebolleta, el pimiento verde y el puerro, llevándolo a pochar en la olla con un poco de aceite. Escurrimos y agregamos las alubias. Cubrir con agua, sazonamos y tapamos, dejando unos 30 minutos. <br/><br/>Las alubias se sirven con todos sus sacramentos. Unas guindillas de Ibarra son el complemento ideal.",
+        "turismdescription" : "Poner las alubias en remojo el dí­a anterior. Cocer la costilla y el tocino con agua y una pizca de sal durante 30 minutos en la olla a presión. Escurrir y reservar. Aparte, se pone a cocer la morcilla y el chorizo en una cazuela con agua y una pizca de sal durante 40 minutos y a fuego suave.  Picar la cebolleta, el pimiento verde y el puerro, llevándolo a pochar en la olla con un poco de aceite. Escurrimos y agregamos las alubias. Cubrir con agua, sazonamos y tapamos, dejando unos 30 minutos.  Las alubias se sirven con todos sus sacramentos. Unas guindillas de Ibarra son el complemento ideal.",
         "templatetype" : "Platos tí­picos",
         "locality" : "TOLOSA",
         "marks" : "Montes y Valles vascos",
@@ -25,18 +15,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002966_j1_rec_turismo/es_2966/2966-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002966_j1_rec_turismo/es_2966/data/2966_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002966_j1_rec_turismo/r01Index/0000002966_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002966_j1_rec_turismo/opendata/0000002966_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002966_j1_rec_turismo/opendata/0000002966_j1_rec_turismo.zip",
+        "img":"http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002966_j1_rec_turismo/es_2966/images/Alubias%20de%20Tolosa%20640x315.jpg"
       }
-    }, {
-      "id" : 2,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Angulas al estilo tradicional",
-        "turismdescription" : "Se coloca a fuego vivo en una cazuela de barro pequeña aceite de oliva virgen, junto a un diente de ajo, trozeado en laminas y un trozo de guindilla. Cuando hierva se añade un cuarto de kilo de angulas, que deben revolverse de forma continua con un tenedor de madera. Tras un corto hervor, se sirven directamente en la cazuela. Una bonita manera de presenatacií³n es en cazuela individual por cada comensal.",
+        "turismdescription" : "Se coloca a fuego vivo en una cazuela de barro pequeña aceite de oliva virgen, junto a un diente de ajo, trozeado en laminas y un trozo de guindilla. Cuando hierva se añade un cuarto de kilo de angulas, que deben revolverse de forma continua con un tenedor de madera. Tras un corto hervor, se sirven directamente en la cazuela. Una bonita manera de presenatación es en cazuela individual por cada comensal.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Pescados y Mariscos",
         "municipalitycode" : "480000",
@@ -48,18 +32,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002968_j1_rec_turismo/es_2968/2968-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002968_j1_rec_turismo/es_2968/data/2968_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002968_j1_rec_turismo/r01Index/0000002968_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002968_j1_rec_turismo/opendata/0000002968_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002968_j1_rec_turismo/opendata/0000002968_j1_rec_turismo.zip",
+        "img": "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002968_j1_rec_turismo/es_2968/images/angulas_h.jpg"
       }
-    }, {
-      "id" : 3,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Bacalao a la vizcaí­na",
-        "turismdescription" : "Previamente, poner en agua el bacalao durante unas 24 horas, cambiándola con frecuencia. <br/><br/>Para la salsa, echamos en una sartén el aceite de oliva hasta cubrir el fondo. Se corta la cebolla en trocitos pequeños, se pocha a fuego lento y, cuando empieza a dorar, se añaden los ajos y el puerro picado. Añadimos el pan troceado o unas cucharaditas de harina para ligar la salsa.<br/> <br/>Para los pimientos: tras quitarles las semillas, los lavamos y dejamos en remojo con agua frí­a. Llevamos a ebullicií³n y tiramos esa agua. Los ponemos en agua frí­a nuevamente y llevamos a hervir. Ya están listos para sacar toda la carne desechando la piel, que añadiremos a la salsa. <br/><br/>Pasamos todo por el chino (nunca con la batidora), para conseguir un punto de finura. Colocamos el bacalao sobre la salsa con la piel hacia arriba, dejando a fuego bajo unos pocos minutos... y a saborearlo.",
+        "turismdescription" : "Previamente, poner en agua el bacalao durante unas 24 horas, cambiándola con frecuencia.  Para la salsa, echamos en una sartén el aceite de oliva hasta cubrir el fondo. Se corta la cebolla en trocitos pequeños, se pocha a fuego lento y, cuando empieza a dorar, se añaden los ajos y el puerro picado. Añadimos el pan troceado o unas cucharaditas de harina para ligar la salsa. Para los pimientos: tras quitarles las semillas, los lavamos y dejamos en remojo con agua frí­a. Llevamos a ebullición y tiramos esa agua. Los ponemos en agua frí­a nuevamente y llevamos a hervir. Ya están listos para sacar toda la carne desechando la piel, que añadiremos a la salsa.  Pasamos todo por el chino (nunca con la batidora), para conseguir un punto de finura. Colocamos el bacalao sobre la salsa con la piel hacia arriba, dejando a fuego bajo unos pocos minutos... y a saborearlo.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Pescados y Mariscos",
         "municipalitycode" : "480000",
@@ -71,18 +49,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002973_j1_rec_turismo/es_2973/2973-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002973_j1_rec_turismo/es_2973/data/2973_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002973_j1_rec_turismo/r01Index/0000002973_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002973_j1_rec_turismo/opendata/0000002973_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002973_j1_rec_turismo/opendata/0000002973_j1_rec_turismo.zip",
+        "img" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002973_j1_rec_turismo/es_2973/images/B.VIZCAINA_V_640x315.jpg"
       }
-    }, {
-      "id" : 4,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Bacalao al Pil Pil",
-        "turismdescription" : "El bacalao se ha tenido previamente en remojo desde el dí­a anterior cambiando el agua tres veces para desalarlo. Desescamar y secar después con un paño limpio. <br/><br/>Colocar una cazuela de barro a fuego medio con el aceite de oliva y los dientes de ajo en láminas. Cuando empiecen a tomar color, retirarlos y reservar. Echar las cuatro tajadas de bacalao, que se dejarán cocer suavemente (nunca freí­r) durante unos siete u ocho minutos aproximadamente, hasta que el bacalao se ablande. Entonces, retirar la cazuela y pasar este bacalao a otra cazuela, siempre con la piel para arriba y con dos cucharadas del aceite caliente. Dejarlo durante dos o tres minutos para que sude el bacalao. Transcurridos, poner la cazuela sobre una plancha o un fuego bajo y ligar la salsa, añadiendo el aceite restante que ya habrá templado. Ha de moverse en cí­rculos con cuidado de que no se rompa el bacalao y de que no hierva, ya que esto harí­a que se nos cortara la salsa. A medida de que movamos la cazuela, la salsa irá engordando hasta alcanzar una textura gelatinosa, momento en el cual el plato estará listo.<br/><br/>Servir con la piel de los lomos de bacalao arriba y cubierto de una salsa que ha de tapar parcialmente los trozos. Encima de cada lomo colocar unas doradas láminas de ajo que habí­amos reservado.",
+        "turismdescription" : "El bacalao se ha tenido previamente en remojo desde el dí­a anterior cambiando el agua tres veces para desalarlo. Desescamar y secar después con un paño limpio.  Colocar una cazuela de barro a fuego medio con el aceite de oliva y los dientes de ajo en láminas. Cuando empiecen a tomar color, retirarlos y reservar. Echar las cuatro tajadas de bacalao, que se dejarán cocer suavemente (nunca freí­r) durante unos siete u ocho minutos aproximadamente, hasta que el bacalao se ablande. Entonces, retirar la cazuela y pasar este bacalao a otra cazuela, siempre con la piel para arriba y con dos cucharadas del aceite caliente. Dejarlo durante dos o tres minutos para que sude el bacalao. Transcurridos, poner la cazuela sobre una plancha o un fuego bajo y ligar la salsa, añadiendo el aceite restante que ya habrá templado. Ha de moverse en cí­rculos con cuidado de que no se rompa el bacalao y de que no hierva, ya que esto harí­a que se nos cortara la salsa. A medida de que movamos la cazuela, la salsa irá engordando hasta alcanzar una textura gelatinosa, momento en el cual el plato estará listo. Servir con la piel de los lomos de bacalao arriba y cubierto de una salsa que ha de tapar parcialmente los trozos. Encima de cada lomo colocar unas doradas láminas de ajo que habí­amos reservado.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Pescados y Mariscos",
         "municipalitycode" : "480000",
@@ -94,18 +66,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002980_j1_rec_turismo/es_2980/2980-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002980_j1_rec_turismo/es_2980/data/2980_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002980_j1_rec_turismo/r01Index/0000002980_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002980_j1_rec_turismo/opendata/0000002980_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002980_j1_rec_turismo/opendata/0000002980_j1_rec_turismo.zip",
+        "img" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002980_j1_rec_turismo/es_2980/images/bacalao_pilpil_h.jpg"
       }
-    }, {
-      "id" : 5,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Bonito con Tomate",
-        "turismdescription" : "En una cazuela de barro se pone a sofreir en aceite de oliva dos cebollas y un diente de ajo trozeados finito. Cuando esté se añaden rodajas de bonito (dos por persona).  Se retira de la cazuela el bonito y se añade tomate pelado  y troceado en dados. Se sazona y se le añade una pizca de azíºcar.  Se pasa por el pasador hasta obtener una salsa fina, que se vierte en la cazuela y sobre la que se coloca el bonito, dándole un hervor.",
+        "turismdescription" : "En una cazuela de barro se pone a sofreir en aceite de oliva dos cebollas y un diente de ajo trozeados finito. Cuando esté se añaden rodajas de bonito (dos por persona).  Se retira de la cazuela el bonito y se añade tomate pelado  y troceado en dados. Se sazona y se le añade una pizca de azúcar.  Se pasa por el pasador hasta obtener una salsa fina, que se vierte en la cazuela y sobre la que se coloca el bonito, dándole un hervor.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Pescados y Mariscos",
         "municipalitycode" : "480000",
@@ -117,18 +83,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002960_j1_rec_turismo/es_2960/2960-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002960_j1_rec_turismo/es_2960/data/2960_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002960_j1_rec_turismo/r01Index/0000002960_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002960_j1_rec_turismo/opendata/0000002960_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002960_j1_rec_turismo/opendata/0000002960_j1_rec_turismo.zip",
+        "img": "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002960_j1_rec_turismo/es_2960/images/bonito_tomate_h.jpg"
       }
-    }, {
-      "id" : 6,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Caracoles",
-        "turismdescription" : "Los caracoles deben estar limpios, para lo cual han tenido que pasar unos dí­as purgando dentro de una red o en un recipiente adecuado, con el fin de facilitar su lavado posterior. Como se habrán quedado secos, los metemos en agua y los mantenemos tapados durante un dí­a. A continuacií³n, los lavamos 5 í³ 6 veces hasta que queden totalmente limpios. Una vez lavados, los cocemos en una olla con agua junto con los puerros, las cebolletas, la guindilla, un vaso de vino, perejil y sal, durante unos  noventa minutos. <br/><br/>Aparte hacemos una salsa pasando por un pasapuré el resultado de sofreir la cebolla picada, el tocino, el pan y la carne de los pimientos choriceros. Vertemos esta salsa en una cazuela de barro y se le agrega el jamí³n cortado en taquitos y los caracoles y se terminan de hacer en ella durante media hora.",
+        "turismdescription" : "Los caracoles deben estar limpios, para lo cual han tenido que pasar unos dí­as purgando dentro de una red o en un recipiente adecuado, con el fin de facilitar su lavado posterior. Como se habrán quedado secos, los metemos en agua y los mantenemos tapados durante un dí­a. A continuación, los lavamos 5 ó 6 veces hasta que queden totalmente limpios. Una vez lavados, los cocemos en una olla con agua junto con los puerros, las cebolletas, la guindilla, un vaso de vino, perejil y sal, durante unos  noventa minutos.  Aparte hacemos una salsa pasando por un pasapuré el resultado de sofreir la cebolla picada, el tocino, el pan y la carne de los pimientos choriceros. Vertemos esta salsa en una cazuela de barro y se le agrega el jamón cortado en taquitos y los caracoles y se terminan de hacer en ella durante media hora.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Carnes",
         "municipalitycode" : "480000",
@@ -140,16 +100,10 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002982_j1_rec_turismo/es_2982/2982-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002982_j1_rec_turismo/es_2982/data/2982_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002982_j1_rec_turismo/r01Index/0000002982_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002982_j1_rec_turismo/opendata/0000002982_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002982_j1_rec_turismo/opendata/0000002982_j1_rec_turismo.zip",
+        "img":"http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002982_j1_rec_turismo/es_2982/images/caracoles_h.jpg"
       }
-    }, {
-      "id" : 7,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Chuletillas al sarmiento",
         "turismdescription" : "Debemos hacer las chuletillas en una parrilla colocada sobre las brasas vivas de un fuego hecho a base de sarmientos de vid. Debemos tener las chuletillas en aceite de oliva. Cuando la brasa esté lista las salamos y las colocamos sobre la parrilla hasta que quede hecha en el exterior y rosada en el interior, consiguiendo una textura crujiente y tierna a la vez.",
         "templatetype" : "Platos tí­picos",
@@ -163,16 +117,10 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002981_j1_rec_turismo/es_2981/2981-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002981_j1_rec_turismo/es_2981/data/2981_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002981_j1_rec_turismo/r01Index/0000002981_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002981_j1_rec_turismo/opendata/0000002981_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002981_j1_rec_turismo/opendata/0000002981_j1_rec_turismo.zip",
+        "img" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002981_j1_rec_turismo/es_2981/images/chuletillas_h.jpg"
       }
-    }, {
-      "id" : 8,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Cuajada",
         "turismdescription" : "La leche más adecuada para hacerlo es la de cabra, pero puede hacerse con leche entera de vaca. Poner la leche hasta que hierva, momento en el que se retira del fuego. Cuando baja hasta una temperatura tibia añadimos el cuajo.  Se remueve bien y se reparte en vasos de barro individuales. Se sirve frí­o acompañado de miel.",
         "templatetype" : "Platos tí­picos",
@@ -186,18 +134,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002962_j1_rec_turismo/es_2962/2962-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002962_j1_rec_turismo/es_2962/data/2962_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002962_j1_rec_turismo/r01Index/0000002962_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002962_j1_rec_turismo/opendata/0000002962_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002962_j1_rec_turismo/opendata/0000002962_j1_rec_turismo.zip",
+        "img": "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002962_j1_rec_turismo/es_2962/images/cuajada_h.jpg"
       }
-    }, {
-      "id" : 10,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Goxua",
-        "turismdescription" : "Aunque lo ideal es hacer de forma casera tanto el bizcocho como la nata y la crema, hoy en dí­a estos elementos pueden adquirirse ya hechos. <br/><br/>Empapamos el bizcocho de almí­bar. Cortamos el bizcocho en cinco discos de un palmo de diámetro. Para preparar las raciones de goxua colocamos los discos de bizcocho sobre un botí³n de nata y los cubrimos de crema pastelera, sobre la que espolvorearemos azíºcar y canela. Después debemos quemar la superficie con la base de una sartén calentada al fuego, para que el bizcocho quede recubierto de caramelo.",
+        "turismdescription" : "Aunque lo ideal es hacer de forma casera tanto el bizcocho como la nata y la crema, hoy en dí­a estos elementos pueden adquirirse ya hechos.  Empapamos el bizcocho de almí­bar. Cortamos el bizcocho en cinco discos de un palmo de diámetro. Para preparar las raciones de goxua colocamos los discos de bizcocho sobre un botón de nata y los cubrimos de crema pastelera, sobre la que espolvorearemos azúcar y canela. Después debemos quemar la superficie con la base de una sartén calentada al fuego, para que el bizcocho quede recubierto de caramelo.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Postres",
         "municipalitycode" : "480000",
@@ -209,18 +151,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002975_j1_rec_turismo/es_2975/2975-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002975_j1_rec_turismo/es_2975/data/2975_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002975_j1_rec_turismo/r01Index/0000002975_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002975_j1_rec_turismo/opendata/0000002975_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002975_j1_rec_turismo/opendata/0000002975_j1_rec_turismo.zip",
+        "img": "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002975_j1_rec_turismo/es_2975/images/goxua_h.jpg"
       }
-    }, {
-      "id" : 11,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Intxaursaltsa",
-        "turismdescription" : "Se cuece la mitad de la leche con una ramita de canela y cuando rompa a hervir dejar infusionar 5 minutos. Colar para eliminar el palo.<br/><br/>Se cascan las nueces y se saca el fruto. Trituraremos en un mortero, o en una picadora, la mitad de esos frutos junto con el azíºcar. Cuanto más molidas queden las nueces más fina resultará la  intxaursaltsa. <br/><br/>Añadir a la cazuela con la leche la nuez molida con el azíºcar.<br/><br/>Cuando empiece a hervir, remover constantemente con unas varillas de mano durante 10 minutos mientras borbotea suavemente.<br/><br/>Se deja cocer todo a fuego lento durante unos 80 minutos, removiendo de vez en cuando. A medida que se evapore el lí­quido, vamos añadiendo la leche restante hasta que quede una crema espesa con un color tostado.<br/><br/>Retira del fuego y deja que se temple. Se sirve adornada con el resto de nueces peladas molidas y con una hoja de menta.  Se puede tomar frí­a, templada o caliente, segíºn tu gusto.",
+        "turismdescription" : "Se cuece la mitad de la leche con una ramita de canela y cuando rompa a hervir dejar infusionar 5 minutos. Colar para eliminar el palo. Se cascan las nueces y se saca el fruto. Trituraremos en un mortero, o en una picadora, la mitad de esos frutos junto con el azúcar. Cuanto más molidas queden las nueces más fina resultará la  intxaursaltsa.  Añadir a la cazuela con la leche la nuez molida con el azúcar. Cuando empiece a hervir, remover constantemente con unas varillas de mano durante 10 minutos mientras borbotea suavemente. Se deja cocer todo a fuego lento durante unos 80 minutos, removiendo de vez en cuando. A medida que se evapore el lí­quido, vamos añadiendo la leche restante hasta que quede una crema espesa con un color tostado. Retira del fuego y deja que se temple. Se sirve adornada con el resto de nueces peladas molidas y con una hoja de menta.  Se puede tomar frí­a, templada o caliente, según tu gusto.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Postres",
         "municipalitycode" : "480000",
@@ -232,18 +168,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002979_j1_rec_turismo/es_2979/2979-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002979_j1_rec_turismo/es_2979/data/2979_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002979_j1_rec_turismo/r01Index/0000002979_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002979_j1_rec_turismo/opendata/0000002979_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002979_j1_rec_turismo/opendata/0000002979_j1_rec_turismo.zip",
+        "img" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002979_j1_rec_turismo/es_2979/images/intxaursaltsa_h.jpg"
       }
-    }, {
-      "id" : 13,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Merluza en salsa verde",
-        "turismdescription" : "Dejar las almejas en remojo con sal y agua durante 1 hora, para que suelten toda la sal. Pelar los dientes de ajo y picarlos finos. En una cazuela echar el aceite y poner a calentar. Añadir los ajos y que se tuesten un poquito. Luego una cuchara de harina y dejarla medio minuto. Echar el vino y el caldo de pescado, caliente mejor. <br/><br/>Añadir el perejil picado y poner las rodajas en la cazuela. Con tres minutos de coccií³n por cada lado, meneando la cazuela, vale. Echar las almejas y seguir moviendo la cazuela, hasta conseguir que la salsa ligue. <br/><br/>En poco tiempo el plato estará listo. Verás qué delicia.",
+        "turismdescription" : "Dejar las almejas en remojo con sal y agua durante 1 hora, para que suelten toda la sal. Pelar los dientes de ajo y picarlos finos. En una cazuela echar el aceite y poner a calentar. Añadir los ajos y que se tuesten un poquito. Luego una cuchara de harina y dejarla medio minuto. Echar el vino y el caldo de pescado, caliente mejor.  Añadir el perejil picado y poner las rodajas en la cazuela. Con tres minutos de cocción por cada lado, meneando la cazuela, vale. Echar las almejas y seguir moviendo la cazuela, hasta conseguir que la salsa ligue.  En poco tiempo el plato estará listo. Verás qué delicia.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Pescados y Mariscos",
         "municipalitycode" : "480000",
@@ -255,41 +185,12 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002970_j1_rec_turismo/es_2970/2970-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002970_j1_rec_turismo/es_2970/data/2970_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002970_j1_rec_turismo/r01Index/0000002970_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002970_j1_rec_turismo/opendata/0000002970_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002970_j1_rec_turismo/opendata/0000002970_j1_rec_turismo.zip",
+        "img" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002970_j1_rec_turismo/es_2970/images/MERLUZA_SALSA_VERDE_640x315.jpg"
       }
-    }, {
-      "id" : 14,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
-        "documentname" : "Pastel Vasco",
-        "turismdescription" : "Con una batidora de varillas conseguir una mezcla esponjosa con el azíºcar y la mantequilla, la harina y las yemas de huevo, la ralladura de medio limí³n y un chorro de cointreau, añadidos en este orden.<br/><br/>Cubrir de mantequilla y harina un molde redondo y desmontable. Luego cubrirlo con una capa fina de masa y dejar que se enfrí­e. Por otro lado mezclar un puñado de orejones picados y otro de pasas con la crema pastelera. Verter la mezcla resultante sobre el molde preparado previamente y cubrirlo con más masa. Usar un pincel para cubrir la el pastel con huevo batido y hornear a temperatura alta durante 45 minutos.",
-        "templatetype" : "Platos tí­picos",
-        "gastronomytype" : "Postres",
-        "municipalitycode" : "480000",
-        "territory" : "BIZKAIA",
-        "territorycode" : "48",
-        "country" : "España",
-        "countrycode" : "108",
-        "friendlyurl" : "http://opendata.euskadi.eus/catalogo/-/es/platos-pinchos/pastel-vasco/",
-        "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002976_j1_rec_turismo/es_2976/2976-ficha2.html",
-        "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002976_j1_rec_turismo/es_2976/data/2976_openData.xml",
-        "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002976_j1_rec_turismo/r01Index/0000002976_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002976_j1_rec_turismo/opendata/0000002976_j1_rec_turismo.zip"
-      }
-    }, {
-      "id" : 15,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
+    , {
         "documentname" : "Patatas con chorizo",
-        "turismdescription" : "Picamos muy finos la cebolla, el pimiento verde y el rojo. En una cazuela con un poco de aceite echamos la cebolla y los pimientos, salpimentamos y agregamos el laurel. Dejamos pochar a fuego lento unos 15 minutos.<br/><br/>Mientras, se pelan las patatas y las partimos  cortamos el chorizo en rodajas y lo añadimos dando unas vueltas.<br/><br/>Agregamos una cucharadita de pimentí³n, removiendo un poco. Se echa el agua segíºn la cantidad que se desee, dejando hervir unos 10 minutos.<br/><br/>Agregamos las patatas y llevamos a hervir durante 20 minutos a un fuego medio. Probamos para ver la intensidad de sal y pimienta... y a la mesa.",
+        "turismdescription" : "Picamos muy finos la cebolla, el pimiento verde y el rojo. En una cazuela con un poco de aceite echamos la cebolla y los pimientos, salpimentamos y agregamos el laurel. Dejamos pochar a fuego lento unos 15 minutos. Mientras, se pelan las patatas y las partimos  cortamos el chorizo en rodajas y lo añadimos dando unas vueltas. Agregamos una cucharadita de pimentón, removiendo un poco. Se echa el agua según la cantidad que se desee, dejando hervir unos 10 minutos. Agregamos las patatas y llevamos a hervir durante 20 minutos a un fuego medio. Probamos para ver la intensidad de sal y pimienta... y a la mesa.",
         "templatetype" : "Platos tí­picos",
         "gastronomytype" : "Verdura y Legumbres",
         "municipalitycode" : "010000",
@@ -301,100 +202,11 @@
         "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002974_j1_rec_turismo/es_2974/2974-ficha2.html",
         "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002974_j1_rec_turismo/es_2974/data/2974_openData.xml",
         "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002974_j1_rec_turismo/r01Index/0000002974_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002974_j1_rec_turismo/opendata/0000002974_j1_rec_turismo.zip"
+        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002974_j1_rec_turismo/opendata/0000002974_j1_rec_turismo.zip",
+        "img": "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002974_j1_rec_turismo/es_2974/images/patatas%20chorizo_blanco_640x315.jpg"
       }
-    }, {
-      "id" : 17,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
-        "documentname" : "Txipirones en su tinta",
-        "turismdescription" : "Se sofrí­e en una cazuela bañada de aceite de oliva la cebolla picada, el ajo laminado y el tomate picado fino. Dejamos que se poche la cebolla. <br/><br/>A continuacií³n añadimos a la cazuela el pan duro picado, y se deja unos minutos hasta conseguir una masa homogénea. Mezclamos la tinta de los txipirones con el vino blanco y lo añadimos a la cazuela. Dejar cocer durante media hora. Mientras, podemos ir limpiando los txipirones.<br/> <br/>Si decidimos rellenarlos con sus propias patas, las picamos y las introducimos en el cuerpo del txipirí³n. Cuando se haya cocido la salsa, pasar por el pasapuré, para conseguir que sea cremosa. Añadimos los txipirones a la cazuela y dejamos cocer unos 20 minutos. <br/><br/>Solo te queda chuparte los dedos.",
-        "templatetype" : "Platos tí­picos",
-        "gastronomytype" : "Pescados y Mariscos",
-        "municipalitycode" : "480000",
-        "territory" : "BIZKAIA",
-        "territorycode" : "48",
-        "country" : "España",
-        "countrycode" : "108",
-        "friendlyurl" : "http://opendata.euskadi.eus/catalogo/-/es/platos-pinchos/txipirones-en-su-tinta/",
-        "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002963_j1_rec_turismo/es_2963/2963-ficha2.html",
-        "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002963_j1_rec_turismo/es_2963/data/2963_openData.xml",
-        "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002963_j1_rec_turismo/r01Index/0000002963_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002963_j1_rec_turismo/opendata/0000002963_j1_rec_turismo.zip"
-      }
-    }, {
-      "id" : 16,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.760497, 42.844539 ]
-      },
-      "properties" : {
-        "documentname" : "Sukalki",
-        "turismdescription" : "Poner una sartén a fuego vivo con el aceite y los tres dientes de ajo. Cuando éstos estén tomando color, se retiran y se añade la carne cortada en trozos y sazonada, que se deja hasta que aparezca dorada. Una vez dorada, se retira la carne y se cuela el aceite que hemos utilizado para freí­r la carne.<br/><br/>Colocar en una cazuela el aceite colado y a fuego lento incorporar la cebolla, el puerro y las zanahorias, todos ellos pelados y picados finamente. Sazonar. Dejar pochar pausadamente, moviendo con una espátula de madera de vez en cuando hasta que toda la verdura esté medio dorada. Incorporar el tomate hecho y la pulpa de los pimientos choriceros. Dejar unos 10 minutos.<br/><br/>Agregar los trozos de carne a la cazuela de las verduras y rociarla con el vino blanco seco. Procurar que se haga despacio, vigilando para que no se pegue. Añadir caldo o agua caliente si es necesario. Cuando la carne está a punto de ablandarse, retirarla de la cazuela. El caldo de las verduras pasarlo por un colador o chino.<br/><br/>Incorporar a la cazuela el caldo y las patatas cascadas. Reogarlas durante unos 3 minutos moviendo con la espátula. Agregar los trozos de carne y el caldo o agua caliente hasta cubrir el guiso. Cuando las patatas vayan a obtener su punto, apagar el fuego. Dejar la cazuela tapada en reposo durante 10 o 15 minutos antes de servir.",
-        "templatetype" : "Platos tí­picos",
-        "gastronomytype" : "Carnes",
-        "municipalitycode" : "480000",
-        "territory" : "BIZKAIA",
-        "territorycode" : "48",
-        "country" : "España",
-        "countrycode" : "108",
-        "friendlyurl" : "http://opendata.euskadi.eus/catalogo/-/es/platos-pinchos/sukalki/",
-        "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002972_j1_rec_turismo/es_2972/2972-ficha2.html",
-        "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002972_j1_rec_turismo/es_2972/data/2972_openData.xml",
-        "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002972_j1_rec_turismo/r01Index/0000002972_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002972_j1_rec_turismo/opendata/0000002972_j1_rec_turismo.zip"
-      }
-    }, {
-      "id" : 19,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
-        "documentname" : "Zurrukutuna",
-        "turismdescription" : "El bacalao se ha tenido previamente en remojo desde el dí­a anterior cambiando el agua tres veces para desalarlo. Los pimientos choriceros también deben haber estado en remojo durante al menos 5 horas para extraer la carne.  En una cazuela de barro ponemos a dorar el ajo picado. Cuando esté añadimos el pimiento verde, picado fino. Cuando esté blando se añade el bacalao desmigado, la carne de los pimientos choriceros y el pan tostado, cubierto con un poco de caldo. A medida que se va haciendo se mezcla y aplasta para que se vaya convirtiendo en una masa. <br/><br/>Poco antes de terminar se añaden los huevos sin batir para que se hagan sobre la masa. Sobre los huevos se  espolvorea una pizca de perejil picado y se deja sobre el fuego hasta que se hagan los huevos.",
-        "templatetype" : "Platos tí­picos",
-        "gastronomytype" : "Pescados y Mariscos",
-        "municipalitycode" : "480000",
-        "territory" : "BIZKAIA",
-        "territorycode" : "48",
-        "country" : "España",
-        "countrycode" : "108",
-        "friendlyurl" : "http://opendata.euskadi.eus/catalogo/-/es/platos-pinchos/zurrukutuna/",
-        "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002971_j1_rec_turismo/es_2971/2971-ficha2.html",
-        "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002971_j1_rec_turismo/es_2971/data/2971_openData.xml",
-        "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002971_j1_rec_turismo/r01Index/0000002971_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002971_j1_rec_turismo/opendata/0000002971_j1_rec_turismo.zip"
-      }
-    }, {
-      "id" : 18,
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -2.931625, 43.219254 ]
-      },
-      "properties" : {
-        "documentname" : "Txangurro",
-        "turismdescription" : "Cocer el centollo en agua con sal durante un cuarto de hora contado desde que empieza a hervir.<br/><br/>Por otro lado se pone a sofreí­r en aceite la cebolla y el puerro picados. A medida que van haciéndose, se añade el tomate pelado y cortado en trozos, y se deja hacer hasta que se deshaga, aproximadamente un cuarto de hora. <br/>Se abre el txangurro y su jugo se vierte en la cazuela de la salsa. Se le echa un chorrito de Brandy y se mezcla todo muy bien. Se extrae la carne en trozos grandes de las patas (abriéndolas con un mazo) y el cuerpo. Se mezcla con la salsa y se le da un hervor corto. Se vierte en el caparazí³n y, cubierto con un poco de mantequilla y de pan rallado se gratina en el horno.",
-        "templatetype" : "Platos tí­picos",
-        "gastronomytype" : "Pescados y Mariscos",
-        "municipalitycode" : "480000",
-        "territory" : "BIZKAIA",
-        "territorycode" : "48",
-        "country" : "España",
-        "countrycode" : "108",
-        "friendlyurl" : "http://opendata.euskadi.eus/catalogo/-/es/platos-pinchos/txangurro/",
-        "physicalurl" : "http://opendata.euskadi.eus/catalogo/contenidos/j_gastronomia/0000002969_j1_rec_turismo/es_2969/2969-ficha2.html",
-        "dataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002969_j1_rec_turismo/es_2969/data/2969_openData.xml",
-        "metadataxml" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002969_j1_rec_turismo/r01Index/0000002969_j1_rec_turismo-idxContent.xml",
-        "zipfile" : "http://opendata.euskadi.eus/contenidos/j_gastronomia/0000002969_j1_rec_turismo/opendata/0000002969_j1_rec_turismo.zip"
-      }
-    } ]
-  }]
+  ]
+  
+  
+
   
