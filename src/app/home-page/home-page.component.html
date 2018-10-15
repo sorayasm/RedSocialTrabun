@@ -1,7 +1,6 @@
-
 <app-navbar></app-navbar>
 <img class="header" src="../../assets/img/header.jpg" alt="">
-<h2>Bienvenido a Trabún, una red social de alimentación saludable.</h2>
+<p class="subtitle">Bienvenido a Trabún, aquí encontrarás tips y recetas para una alimentación saludable.</p>
 
 <app-post-form></app-post-form>
 <div *ngFor="let post of posts$ | async" class="wall">
@@ -15,10 +14,7 @@
         <mat-card-content>
             <img mat-card-image src="{{post.image}}" alt="">
             <p>{{post.content}}</p>
-        <!--div>
-            <button (click)="deletePost(post.$key)">Delete</button>
-        </div-->
-        <i class="material-icons">favorite</i><i class="material-icons">delete</i><i class="material-icons">create</i>
+            <button (click)="deletePost(post.$key)"><i class="material-icons">delete</i></button>
         </mat-card-content>
       </mat-card>
   </div>

@@ -21,7 +21,7 @@ export class WelcomeComponent implements OnInit {
   signInWithFacebook() {
     this.authService.signInWithFacebook()
     .then((res) => {
-        this.router.navigate(['wall']);
+        this.router.navigate(['/wall']);
       })
     .catch((err) => console.log(err));
   }
@@ -29,7 +29,7 @@ export class WelcomeComponent implements OnInit {
   signInWithGoogle() {
     this.authService.signInWithGoogle()
     .then((res) => {
-        this.router.navigate(['wall']);
+        this.router.navigate(['/wall']);
       })
     .catch((err) => console.log(err));
   }

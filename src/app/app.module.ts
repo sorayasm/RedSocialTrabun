@@ -118,6 +118,7 @@ const appRoutes: Routes = [
 
 // Configs
 export function getAuthServiceConfigs() { }
+
 @NgModule({
   declarations: [
     AppComponent,
