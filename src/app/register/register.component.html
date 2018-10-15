@@ -1,23 +1,23 @@
-
-  <div class='register-div'>
-    <div class='head'>
-      <h1>Registro</h1>
-    </div>
-    <div class='banner'>
-      <img src='../../assets/img/newuser.png' class='img-fluid' alt='' srcset=''>
-    </div> 
-<form [formGroup]='authForm' *ngIf="!(authService.user$ | async)" (ngSubmit)='onRegister()'>
-  <p>Ingresa un correo: </p>
-  <input type='email' formControlName='email'><br> 
-  <p>Ingresa una contraseña: </p>
-  <input type='password' formControlName='password'><br>
-  <button mat-button type='submit'>Registrarse</button> <br>
-  <button mat-button routerLink='/login'>Ir a Login</button>
+<div class='register-div'>
+  <div class='head'>
+    <h1>Registro</h1>
+  </div>
+  <div class='banner'>
+    <img src='../../assets/img/newuser.png' class='img-fluid' alt='' srcset=''>
+  </div> 
+  <form [formGroup]='authForm' *ngIf="!(authService.user$ | async)" (ngSubmit)='onRegister()'>
+    <p>Ingresa un correo: </p>
+    <input class="input" type='email' formControlName='email'><br> 
+    <p>Ingresa una contraseña: </p>
+    <input class="input" type='password' formControlName='password'><br>
+    <button mat-button type='submit'>Registrarse</button> <br>
+    <button mat-button routerLink='/login'>Ir a Login</button>
   </form>
   <div class="logged" *ngIf="(authService.user$ | async)">
     <p>Ya ingresaste.</p>
     <p> Por favor elige una opción:</p>
     <button mat-button routerLink="/wall">Ir al muro</button>
+    <br>
     <button mat-button type="button" (click)="onLogout()">Salir</button>
   </div>
 </div>  
