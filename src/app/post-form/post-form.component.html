@@ -4,7 +4,7 @@
     <p>¡Hola! Este es nuestro mural colectivo, aquí puedes compartir tu mejor consejo para una alimentación saludable. Este mural lo construimos entre todos, todos los consejos son bienvenidos.</p>
     <mat-form-field>
       <textarea  matInput #description type="text" formControlName="content" placeholder="Contenido"></textarea>
-      <p *ngIf="postForm.get('content').errors && postForm.get('content').errors.required && (postForm.get('content').dirty || postForm.get('content').touched)"
+      <p *ngIf="postForm.get('content').errors && (postForm.get('content').dirty || postForm.get('content').touched)"
       style="color:red;">Por favor escribe tu mensaje</p>
     </mat-form-field>
     <button mat-button type="submit" [disabled]="!postForm.valid">
