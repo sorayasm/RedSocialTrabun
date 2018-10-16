@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { YogaService } from './yoga.service';
+import { YogaService } from '../services/yoga.service';
 
 describe('YogaServiceService', () => {
   beforeEach(() => {

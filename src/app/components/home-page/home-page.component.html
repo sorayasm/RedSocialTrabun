@@ -3,7 +3,7 @@
 <p class="subtitle">Bienvenido a Trabún, aquí encontrarás tips y recetas para una alimentación saludable.</p>
 
 <app-post-form></app-post-form>
-<div *ngFor="let post of posts$ | async" class="wall">
+<div *ngFor="let post of posts$" class="wall">
       <mat-card class="card">
         <mat-card-header>
             <div mat-card-avatar class="header-image">

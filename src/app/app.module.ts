@@ -1,16 +1,16 @@
 // Components
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { PerfilComponent } from './perfil/perfil.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { RegisterComponent } from './register/register.component';
-import { FriendsComponent } from './friends/friends.component';
-import { PostFormComponent } from './post-form/post-form.component';
-import { YogaComponent } from './yoga/yoga.component';
-import { RecipesComponent } from './recipes/recipes.component';
+import { LoginComponent } from './components/login/login.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+import { YogaComponent } from './components/yoga/yoga.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
 
 // Funcionalidad y estilos
 import { NgModule } from '@angular/core';
@@ -73,7 +73,7 @@ import {
 
 // Otros
 import { environment } from '../environments/environment';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 
 // Variable de Rutas
 
@@ -186,7 +186,6 @@ export function getAuthServiceConfigs() { }
     MatTreeModule,
     MatCardModule,
     MatChipsModule
-
   ],
   providers: [
     HttpClientModule,

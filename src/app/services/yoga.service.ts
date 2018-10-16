@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { YogaInfo } from './interfaces/yoga.interface';
+import { YogaInfo } from '../interfaces/yoga.interface';
 
 @Injectable({
   providedIn: 'root'

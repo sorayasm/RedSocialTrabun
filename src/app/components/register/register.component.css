@@ -21,7 +21,7 @@
 }
 
 .banner {
-    background-image: url(../../assets/img/food.jpg); 
+    background-image: url(../../../assets/img/food.jpg); 
     background-repeat: repeat-y;
     width: 100%;
     height: 15em;
