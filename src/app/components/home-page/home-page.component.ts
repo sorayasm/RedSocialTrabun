@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import {map} from 'rxjs/operators';
+import { DatabaseService } from '../../services/database.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-home-page',
@@ -9,38 +10,17 @@ import {map} from 'rxjs/operators';
 })
 
 export class HomePageComponent implements OnInit {
-  posts$: any;
-  postList$: AngularFireList<any[]>;
-
-
-  constructor(public database: AngularFireDatabase) {
-   this.getPosts();
+public author: any;
+  constructor(public database: AngularFireDatabase, public dbService: DatabaseService, private firebaseAuth: AngularFireAuth) {
+   this.author = this.firebaseAuth.auth.currentUser.email;
   }
-
-  getPosts() {
-    this.database.list('/posts').snapshotChanges()
-    .pipe(map(
-      snapshot => {
-        const result = [];
-        for (let i = 0; i < snapshot.length; i++) {
-          const postVal = snapshot[i].payload.val();
-          postVal['$key'] = snapshot[i].payload.key; // add $key
-          result.push(postVal);
-        } return result;
-      }))
-    .subscribe((resp: any) => {
-      this.posts$ = Object.values(resp); // make it readable
-    });
-  }
-
-deletePost(dataId) {
- // const newKeyPost = this.postList$.(this.posts$).key;
-  const post = this.database.list(`/posts/${dataId}`).remove();
-}
-
 
   ngOnInit() {
   }
 
+  addLike(key, likes) {
+    likes++;
+    this.dbService.updateData('posts/' + key, { likes: likes });
+  }
 }
 
