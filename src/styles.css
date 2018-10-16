@@ -25,6 +25,7 @@ h2 {
   text-align: center;
   font-style: italic;
 }
+
 md-icon{
   font-family: 'Material Icons' !important;
   color: rgb(49, 49, 49);
@@ -62,4 +63,7 @@ md-icon{
   padding: 10px;
   border-radius: 4px;
   width: 200px;
+}
+.useremail {
+  padding-left: 50px;
 }
