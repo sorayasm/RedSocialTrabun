@@ -1,6 +1,6 @@
-# Red Social Trabún
+# Red Social Trabun
 Trabún es una red social para compartir contenidos sobre la temática de alimentación consciente, autosustentable y orgánica. 
-<p align="center"><a href="https://trabun2-c3d25.firebaseapp.com/" target="_blank"><img src="./src/assets/img/trabun.jpg" alt="Vista previa" class="inline"/></a></p>
+<p align="center"><a href="https://trabun2-c3d25.firebaseapp.com/" target="_blank">![VistaPrevia](https://raw.githubusercontent.com/sorayasm/RedSocialTrabun/master/src/assets/img/trabun.jpg)</a></p>
 En el siguiente proyecto, nos dimos a la tarea de realizar una red social con temática de alimentación consciente, autosustentable y organica. Para ello, realizamos un benchmark de las principales redes sociales de las cuales nos inspiramos para llevar a cabo nuestro proyecto, y así poder tener una idéa más clara de lo queríamos lograr. También realizamos una encuesta con la que que obtuvimos información cuantitativa y pudimos saber de forma general, los intereses de las personas por una alimentación más consciente y saludable. Esto nos llevo a poder hacer una entrevista más personalizada y poder obtener datos más cualitativos.
 
 En el siguiente link adjuntamos entrevista de audio y graficos con encuesta realizada: 
